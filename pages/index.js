@@ -15,10 +15,10 @@ export default function Index() {
       </Head>
       <CommandLine />
       <Header />
-      <main className="w-full max-w-screen-xl h-full m-auto">
+      {/* <main className="w-full max-w-screen-xl h-full m-auto">
         <Home />
         <Projects />
-      </main>
+      </main> */}
     </>
   );
 }

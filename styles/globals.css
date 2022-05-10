@@ -3,7 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  font-family: Raleway;
+@layer base {
+  html,
+  body {
+    font-family: Raleway;
+    box-sizing: border-box;
+  }
 }
