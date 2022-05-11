@@ -1,4 +1,4 @@
-import DropDownNav from "./DropDownNav";
+import HamburgerIcon from "./HamburgerIcon";
 
 export default function Header() {
   const sections = ["HOME", "PROJETOS", "HABILIDADES", "CONTATO"];
@@ -18,7 +18,7 @@ export default function Header() {
           })}
         </nav>
         {/* Mobile Hamburger navbar */}
-        <DropDownNav sections={sections} />
+        <HamburgerIcon sections={sections} />
       </div>
     </header>
   );

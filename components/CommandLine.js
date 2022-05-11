@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export default function CommandLine() {
   const [showCommandLine, setShowCommandLine] = useState();
@@ -8,12 +8,12 @@ export default function CommandLine() {
       showCommandLine ? setShowCommandLine(false) : setShowCommandLine(true);
     };
 
-    window.addEventListener('keydown', handleUserKeyPress);
+    window.addEventListener("keydown", handleUserKeyPress);
 
     return () => {
-      window.removeEventListener('keydown', handleUserKeyPress);
+      window.removeEventListener("keydown", handleUserKeyPress);
     };
   }, [showCommandLine]);
 
-  return <>{showCommandLine ? <h1>showando</h1> : <></>}</>;
+  return <>{showCommandLine ? <h1></h1> : <></>}</>;
 }

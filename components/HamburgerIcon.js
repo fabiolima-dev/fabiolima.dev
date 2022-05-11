@@ -1,6 +1,7 @@
 import { useState } from "react";
+import DropDownMenu from "./DropDownMenu";
 
-export default function DropDownNav({ sections }) {
+export default function HamburgerIcon({ sections }) {
   const [open, setOpen] = useState(false);
 
   function handleClick() {
@@ -15,11 +16,7 @@ export default function DropDownNav({ sections }) {
         <div className="bg-black w-8 h-[2px] rounded mb-[5px]"></div>
         <div className="bg-black w-8 h-[2px] rounded mb-[5px]"></div>
       </div>
-      {open ? <Nav /> : <></>}
+      {open ? <DropDownMenu sections={sections} /> : <></>}
     </>
   );
-}
-
-function Nav() {
-  return <div>sections.</div>;
 }
