@@ -6,6 +6,12 @@ import Home from "../components/Home";
 import Projects from "../components/Projects";
 
 export default function Index() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  function handleSetDarkMode() {
+    darkMode ? setDarkMode(false) : setDarkMode(true);
+  }
+
   return (
     <>
       <Head>
@@ -14,7 +20,7 @@ export default function Index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* <CommandLine /> */}
-      <Header />
+      <Header handleSetDarkMode={handleSetDarkMode} darkMode={darkMode} />
       {/* <main className="w-full max-w-screen-xl h-full m-auto">
         <Home />
         <Projects />

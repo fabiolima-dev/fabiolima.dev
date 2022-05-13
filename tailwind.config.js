@@ -6,23 +6,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        teste: "#000000",
-        primary: {
-          light: "#FFFFFF",
-          dark: "#000000",
-        },
-        gradients: {
-          primary: {
-            light: {
-              start: "#A63093",
-              end: "#482FDF",
-            },
-            dark: {
-              start: "#A63093",
-              end: "#482FDF",
-            },
-          },
-        },
+        gray: "#27272a",
+        primary: "var(--color-primary)",
+        secondary: "var(--color-secondary)",
       },
     },
   },

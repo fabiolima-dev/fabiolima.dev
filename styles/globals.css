@@ -5,6 +5,23 @@
 @tailwind utilities;
 
 @layer base {
+  .dark-theme {
+    --color-primary: #000000;
+    --color-secondary: #ffffff;
+    --gradient-hyper-one: rgb(236, 72, 153);
+    --gradient-hyper-two: rgb(239, 68, 68);
+    --gradient-hyper-three: rgb(234, 179, 8);
+  }
+  .light-theme {
+    --color-primary: #ffffff;
+    --color-secondary: #000000;
+    --gradient-hyper-one: rgb(236, 72, 153);
+    --gradient-hyper-two: rgb(239, 68, 68);
+    --gradient-hyper-three: rgb(234, 179, 8);
+  }
+}
+
+@layer base {
   html,
   body {
     font-family: Ubuntu;
