@@ -1,5 +1,6 @@
 import { useState } from "react";
 import HamburgerIcon from "./HamburgerIcon";
+import DarkModeIcon from "./DarkModeIcon";
 import MobileNav from "./MobileNav";
 
 export default function Header({ handleSetDarkMode, darkMode }) {
@@ -13,14 +14,14 @@ export default function Header({ handleSetDarkMode, darkMode }) {
 
   return (
     <>
-      <header className="dark-theme fixed flex h-20 w-screen items-center justify-center border-b-2 bg-primary">
-        <div className="mx-10 flex w-full max-w-screen-xl justify-between md:mx-20">
-          <h1 className="-z-20 text-secondary">LOGO</h1>
+      <header className="fixed flex h-16 w-screen items-center justify-center border-b-[1px] border-tertiary bg-primary">
+        <div className="mx-10 flex w-full justify-between md:mx-20">
+          <h1 className="-z-20 text-sm text-secondary">LOGO</h1>
           {/* Larger Screens navbar */}
           <nav className="hidden md:block">
             {sections.map((section) => {
               return (
-                <a href="#" className="ml-20 text-base text-secondary">
+                <a href="#" className="ml-16 text-sm font-light text-secondary">
                   {section}
                 </a>
               );
@@ -28,6 +29,7 @@ export default function Header({ handleSetDarkMode, darkMode }) {
           </nav>
           {/* Mobile Hamburger navbar */}
           <HamburgerIcon handleClick={handleSetOpen} opened={open} />
+          <DarkModeIcon />
           {open ? <MobileNav sections={sections} /> : <></>}
         </div>
       </header>

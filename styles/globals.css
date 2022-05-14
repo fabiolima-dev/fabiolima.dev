@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500;700&family=Ubuntu:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500;700&family=Ubuntu:wght@300;500;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,16 +8,72 @@
   .dark-theme {
     --color-primary: #000000;
     --color-secondary: #ffffff;
-    --gradient-hyper-one: rgb(236, 72, 153);
-    --gradient-hyper-two: rgb(239, 68, 68);
-    --gradient-hyper-three: rgb(234, 179, 8);
+    --color-tertiary: #55555a;
+    --color-quaternary: #e5e5ea;
+
+    --gradient-hyper-one: rgb(255, 78, 165);
+    --gradient-hyper-two: rgb(255, 73, 73);
+    --gradient-hyper-three: rgb(255, 199, 27);
+
+    --gradient-oceanic-one: rgb(143, 255, 184);
+    --gradient-oceanic-two: rgb(128, 176, 255);
+    --gradient-oceanic-three: rgb(200, 140, 255);
+
+    --gradient-candy-one: rgb(249, 168, 212);
+    --gradient-candy-two: rgb(216, 180, 254);
+    --gradient-candy-three: rgb(167, 129, 248);
+
+    --gradient-mojave-one: rgb(254, 249, 195);
+    --gradient-mojave-two: rgb(253, 224, 71);
+    --gradient-mojave-three: rgb(234, 193, 0);
+
+    --gradient-sunset-one: rgb(199, 210, 254);
+    --gradient-sunset-two: rgb(254, 202, 202);
+    --gradient-sunset-three: rgb(254, 249, 195);
   }
   .light-theme {
     --color-primary: #ffffff;
     --color-secondary: #000000;
-    --gradient-hyper-one: rgb(236, 72, 153);
-    --gradient-hyper-two: rgb(239, 68, 68);
-    --gradient-hyper-three: rgb(234, 179, 8);
+    --color-tertiary: #c5c5ca;
+    --color-quaternary: #35353a;
+
+    --gradient-hyper-one: rgb(229, 70, 149);
+    --gradient-hyper-two: rgb(229, 65, 65);
+    --gradient-hyper-three: rgb(255, 236, 26);
+
+    --gradient-oceanic-one: rgb(100, 178, 128);
+    --gradient-oceanic-two: rgb(43, 94, 178);
+    --gradient-oceanic-three: rgb(112, 39, 178);
+
+    --gradient-candy-one: rgb(204, 138, 174);
+    --gradient-candy-two: rgb(173, 145, 204);
+    --gradient-candy-three: rgb(106, 115, 204);
+
+    --gradient-mojave-one: rgb(255, 236, 35);
+    --gradient-mojave-two: rgb(255, 194, 71);
+    --gradient-mojave-three: rgb(204, 172, 7);
+
+    --gradient-sunset-one: rgb(122, 139, 204);
+    --gradient-sunset-two: rgb(229, 161, 161);
+    --gradient-sunset-three: rgb(229, 225, 176);
+  }
+}
+
+@layer utilities {
+  .gradient-hyper {
+    @apply from-[var(--gradient-hyper-one)] via-[var(--gradient-hyper-two)] to-[var(--gradient-hyper-three)];
+  }
+  .gradient-oceanic {
+    @apply from-[var(--gradient-oceanic-one)] via-[var(--gradient-oceanic-two)] to-[var(--gradient-oceanic-three)];
+  }
+  .gradient-candy {
+    @apply from-[var(--gradient-candy-one)] via-[var(--gradient-candy-two)] to-[var(--gradient-candy-three)];
+  }
+  .gradient-mojave {
+    @apply from-[var(--gradient-mojave-one)] via-[var(--gradient-mojave-two)] to-[var(--gradient-mojave-three)];
+  }
+  .gradient-sunset {
+    @apply from-[var(--gradient-sunset-one)] via-[var(--gradient-sunset-two)] to-[var(--gradient-sunset-three)];
   }
 }
 

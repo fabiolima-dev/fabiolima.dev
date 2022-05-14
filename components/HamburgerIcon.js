@@ -1,20 +1,33 @@
 export default function HamburgerIcon({ handleClick, opened }) {
-  const bars = [];
-
-  for (let i = 0; i < 3; i++) {
-    bars.push(
+  return (
+    <div
+      onClick={handleClick}
+      className={`${
+        opened ? "justify-center" : "justify-between"
+      } flex flex-col items-center md:hidden`}
+    >
       <div
         className={`${
-          opened ? "bg-white" : "bg-secondary"
-        } mb-[5px] h-[2px] w-8 rounded`}
-        key={i}
+          opened ? "w-0" : "bg-secondary"
+        } h-[2px] w-8 rounded duration-500 ease-in-out`}
       ></div>
-    );
-  }
-
-  return (
-    <div onClick={handleClick} className="md:hidden">
-      {bars}
+      <div className="h-[2px] w-8">
+        <div
+          className={`${
+            opened ? "rotate-45 bg-white" : "bg-secondary"
+          } absolute h-[2px] w-8 rounded duration-500 ease-in-out`}
+        ></div>
+        <div
+          className={`${
+            opened ? "-rotate-45 bg-white" : "bg-secondary"
+          } absolute h-[2px] w-8 rounded duration-500 ease-in-out `}
+        ></div>
+      </div>
+      <div
+        className={`${
+          opened ? "w-0" : "bg-secondary"
+        } h-[2px] w-8 rounded duration-500 ease-in-out`}
+      ></div>
     </div>
   );
 }
