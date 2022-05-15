@@ -9,7 +9,7 @@ export default function Home({ darkMode }) {
           </h3>
           <h1
             className={
-              "gradient-sunset w-fit bg-gradient-to-r bg-clip-text text-center text-8xl font-bold text-transparent"
+              "gradient-oceanic w-fit bg-gradient-to-r bg-clip-text text-center text-8xl font-bold text-transparent"
             }
           >
             Fabio Lima.
