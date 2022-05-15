@@ -18,7 +18,7 @@ export default function Header({ darkMode, setDarkMode, sections }) {
         {sections.map((item) => {
           return (
             <a
-              href={sections.link}
+              href={item.link}
               className="mx-2 text-sm font-light text-secondary"
             >
               {item.section}
