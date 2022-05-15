@@ -2,7 +2,7 @@ export default function HamburgerIcon({ handleClick, opened }) {
   return (
     <div
       onClick={handleClick}
-      className="flex h-4 flex-col items-center justify-between md:hidden"
+      className="z-10 flex h-4 flex-col items-center justify-between md:hidden"
     >
       <div
         className={`${

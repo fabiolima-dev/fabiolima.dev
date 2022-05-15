@@ -12,7 +12,7 @@ export default function Header({ darkMode, setDarkMode, sections }) {
 
   return (
     <header className="fixed flex h-16 w-screen items-center justify-between border-b-[1px] border-tertiary bg-primary px-10 md:px-20">
-      <h1 className="-z-20 text-sm text-secondary">LOGO</h1>
+      <h1 className="text-sm text-secondary">LOGO</h1>
       {/* Larger Screens navbar */}
       <nav className="hidden md:mx-12 md:flex md:w-[576px] md:max-w-xl md:justify-between">
         {sections.map((item) => {
@@ -31,7 +31,7 @@ export default function Header({ darkMode, setDarkMode, sections }) {
         <DarkModeIcon darkMode={darkMode} setDarkMode={setDarkMode} />
         <HamburgerIcon handleClick={handleSetOpen} opened={open} />
       </div>
-      {open ? <MobileNav sections={sections} /> : <></>}
+      <MobileNav sections={sections} opened={open} />
     </header>
   );
 }

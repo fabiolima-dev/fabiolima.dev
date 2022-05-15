@@ -1,6 +1,10 @@
-export default function MobileNav({ sections }) {
+export default function MobileNav({ sections, opened }) {
   return (
-    <div className="fixed left-0 top-0 -z-10 flex h-screen min-h-[400px] w-screen items-center bg-gray-3 md:hidden">
+    <div
+      className={`${
+        opened ? "" : "translate-x-full"
+      } fixed top-0 left-0 flex h-screen min-h-[400px] w-screen items-center bg-gray-3 duration-500 ease-in-out md:hidden`}
+    >
       <nav className="flex h-4/5 flex-col justify-evenly">
         {sections.map((item) => {
           return (
