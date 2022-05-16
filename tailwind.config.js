@@ -5,18 +5,22 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        xsm: "400px",
+      },
       animation: {
-        reveal: "1s reveal 1s ease-in-out",
-        gradient: "1s gradient 1s ease-in-out forwards",
+        cover: "1s cover 1s ease-in-out",
+        "insta-cover": "1s cover ease-in-out",
+        "text-fill": "1s text-fill 1s ease-in-out forwards",
       },
       keyframes: {
-        reveal: {
-          "0%": { width: "0" },
+        cover: {
+          "0%": { width: "0", height: "48px" },
           "33%": { width: "100%" },
           "66%": { width: "100%" },
-          "100%": { width: "0", "margin-left": "auto" },
+          "100%": { width: "0", "margin-left": "auto", height: "48px" },
         },
-        gradient: {
+        "text-fill": {
           "0%": {
             "text-fill-color": "transparent",
             "-webkit-text-stroke": "1px white",
