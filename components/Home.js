@@ -1,12 +1,21 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
-export default function Home({}) {
+export default function Home({ setTitleHeight }) {
   const [position, setPosition] = useState(0);
+  const titleRef = useRef();
 
   useEffect(() => {
-    window.addEventListener("scroll", (e) => {
+    function scrollHandler() {
       setPosition(window.pageYOffset);
-    });
+    }
+
+    window.addEventListener("scroll", scrollHandler);
+
+    console.log(titleRef.current.offsetWidth);
+
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
   }, []);
 
   return (
@@ -23,13 +32,16 @@ export default function Home({}) {
           >
             👋️ Olá, me chamo
           </h3>
-          <div className="w-[90vw]">
+          <div className="my-2 flex max-w-fit bg-red-500 md:my-6">
             <h1
-              className={`relative my-2 w-fit animate-text-fill text-5xl font-bold [-webkit-text-fill-color:transparent] [-webkit-text-stroke:1px_white] md:my-6 md:text-7xl`}
+              ref={titleRef}
+              className={`relative w-fit animate-text-fill text-5xl font-bold md:text-7xl`}
             >
               Fabio Lima.
             </h1>
-            <div className="gradient-oceanic relative bottom-14 h-0 w-0 animate-cover rounded-lg bg-gradient-to-r duration-500 ease-in-out md:bottom-[96px] md:h-[72px]"></div>
+            <h1 className="absolute max-h-min w-0 max-w-max animate-cover rounded-lg bg-blue-500 bg-gradient-to-r text-5xl font-bold duration-500 ease-in-out md:text-7xl">
+              Fabio Lima.
+            </h1>
           </div>
           <h3
             style={{
@@ -54,3 +66,5 @@ export default function Home({}) {
     </div>
   );
 }
+
+// [-webkit-text-fill-color:transparent] [-webkit-text-stroke:1px_white]

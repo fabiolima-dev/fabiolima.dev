@@ -15,10 +15,10 @@ module.exports = {
       },
       keyframes: {
         cover: {
-          "0%": { width: "0", height: "48px" },
-          "33%": { width: "100%" },
-          "66%": { width: "100%" },
-          "100%": { width: "0", "margin-left": "auto", height: "48px" },
+          "0%": { width: "0" },
+          "33%": { width: "auto" },
+          "66%": { width: "10000px" },
+          "100%": { width: "0", "margin-left": "auto" },
         },
         "text-fill": {
           "0%": {
@@ -43,7 +43,7 @@ module.exports = {
             "-webkit-text-stroke": "0 currentcolor",
             background:
               "linear-gradient(to right, var(--gradient-oceanic-one), var(--gradient-oceanic-two), var(--gradient-oceanic-three))",
-            "background-clip": "text",
+            // "background-clip": "text",
           },
         },
       },

@@ -22,6 +22,12 @@ export default function Index() {
     { section: "CONTATO", color: "gradient-candy", link: "#" },
   ];
 
+  let titleHeight = 0;
+
+  function setTitleHeight(height) {
+    titleHeight = height;
+  }
+
   return (
     <div
       className={`${
@@ -40,9 +46,9 @@ export default function Index() {
       />
       <main className="h-full w-full min-w-[300px] max-w-screen-2xl px-5 md:px-28">
         <section>
-          <Home />
+          <Home setTitleHeight={setTitleHeight} />
         </section>
-        <SectionTitle title="Habilidades" section={projectsInView} />
+        <SectionTitle section={projectsInView}>Projetos.</SectionTitle>
         <section ref={projectsRef}>
           <Projects section={projectsInView} />
         </section>
