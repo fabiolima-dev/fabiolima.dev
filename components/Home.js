@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-export default function Home({ setTitleHeight }) {
+export default function Home({ setTitleWidth, titleWidth, section }) {
   const [position, setPosition] = useState(0);
   const titleRef = useRef();
 
@@ -11,7 +12,7 @@ export default function Home({ setTitleHeight }) {
 
     window.addEventListener("scroll", scrollHandler);
 
-    console.log(titleRef.current.offsetWidth);
+    setTitleWidth(titleRef.current.getBoundingClientRect().width);
 
     return () => {
       window.removeEventListener("scroll", scrollHandler);
@@ -22,7 +23,7 @@ export default function Home({ setTitleHeight }) {
     <div className="flex h-screen grow flex-col items-start">
       <div className="h-16"></div>
       <div className="flex grow flex-col justify-evenly">
-        <div className="sticky top-10 flex flex-col items-start justify-evenly  md:top-6">
+        <div className="sticky top-12 flex flex-col items-start justify-evenly md:top-6">
           <h3
             style={{
               opacity: `${-position / 2 + 100}%`,
@@ -32,16 +33,55 @@ export default function Home({ setTitleHeight }) {
           >
             👋️ Olá, me chamo
           </h3>
-          <div className="my-2 flex max-w-fit bg-red-500 md:my-6">
-            <h1
-              ref={titleRef}
-              className={`relative w-fit animate-text-fill text-5xl font-bold md:text-7xl`}
+          <div className="my-2 md:my-6">
+            <AnimatePresence>
+              {!section && (
+                <motion.h1
+                  key="Home title"
+                  animate={{
+                    background:
+                      "linear-gradient(to right, var(--gradient-oceanic-one), var(--gradient-oceanic-two), var(--gradient-oceanic-three))",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextStrokeColor: "currentcolor",
+                    WebkitTextStrokeWidth: 0,
+                  }}
+                  transition={{ delay: 1.5 }}
+                  exit={{ opacity: 0, transition: { duration: 0, delay: 0.3 } }}
+                  ref={titleRef}
+                  className={`w-max bg-transparent text-5xl font-bold leading-tight [-webkit-text-fill-color:transparent] [-webkit-text-stroke:1px_white] md:text-6xl md:leading-tight`}
+                >
+                  Fabio Lima.
+                </motion.h1>
+              )}
+            </AnimatePresence>
+            <div
+              style={{ width: `${titleWidth}px` }}
+              className="absolute top-[32px] h-16 md:top-[56px] md:h-20"
             >
-              Fabio Lima.
-            </h1>
-            <h1 className="absolute max-h-min w-0 max-w-max animate-cover rounded-lg bg-blue-500 bg-gradient-to-r text-5xl font-bold duration-500 ease-in-out md:text-7xl">
-              Fabio Lima.
-            </h1>
+              <AnimatePresence>
+                {!section && (
+                  <motion.div
+                    key="Home title box"
+                    animate={{
+                      width: [
+                        "0px",
+                        `${titleWidth}px`,
+                        `${titleWidth}px`,
+                        "0px",
+                      ],
+                      marginLeft: ["0px", "0px", "0px", "auto"],
+                    }}
+                    transition={{
+                      delay: 1,
+                      ease: "easeInOut",
+                      duration: 1,
+                      times: [0, 0.3, 0.6, 1],
+                    }}
+                    className="gradient-oceanic relative h-16 rounded-md bg-gradient-to-r md:h-20"
+                  ></motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
           <h3
             style={{
@@ -66,5 +106,3 @@ export default function Home({ setTitleHeight }) {
     </div>
   );
 }
-
-// [-webkit-text-fill-color:transparent] [-webkit-text-stroke:1px_white]

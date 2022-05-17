@@ -6,46 +6,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        xsm: "400px",
-      },
-      animation: {
-        cover: "1s cover 1s ease-in-out",
-        "insta-cover": "1s cover ease-in-out",
-        "text-fill": "1s text-fill 1s ease-in-out forwards",
-      },
-      keyframes: {
-        cover: {
-          "0%": { width: "0" },
-          "33%": { width: "auto" },
-          "66%": { width: "10000px" },
-          "100%": { width: "0", "margin-left": "auto" },
-        },
-        "text-fill": {
-          "0%": {
-            "text-fill-color": "transparent",
-            "-webkit-text-stroke": "1px white",
-            "background-color": "transparent",
-          },
-          "33%": {
-            "text-fill-color": "transparent",
-            "-webkit-text-stroke": "1px white",
-            "background-color": "transparent",
-          },
-          "66%": {
-            "text-fill-color": "transparent",
-            "-webkit-text-stroke": "0 currentcolor",
-            background:
-              "linear-gradient(to right, var(--gradient-oceanic-one), var(--gradient-oceanic-two), var(--gradient-oceanic-three))",
-            "background-clip": "text",
-          },
-          "100%": {
-            "text-fill-color": "transparent",
-            "-webkit-text-stroke": "0 currentcolor",
-            background:
-              "linear-gradient(to right, var(--gradient-oceanic-one), var(--gradient-oceanic-two), var(--gradient-oceanic-three))",
-            // "background-clip": "text",
-          },
-        },
+        sm: "350px",
       },
       fontFamily: {
         sans: ["Ubuntu"],

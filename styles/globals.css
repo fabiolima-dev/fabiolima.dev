@@ -76,11 +76,3 @@
     @apply from-[var(--gradient-sunset-one)] via-[var(--gradient-sunset-two)] to-[var(--gradient-sunset-three)];
   }
 }
-
-@layer base {
-  html,
-  body {
-    font-family: Ubuntu;
-    box-sizing: border-box;
-  }
-}

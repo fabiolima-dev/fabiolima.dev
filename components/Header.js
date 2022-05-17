@@ -15,13 +15,13 @@ export default function Header({ darkMode, setDarkMode, sections }) {
       <h1 className="text-sm text-secondary">LOGO</h1>
       {/* Larger Screens navbar */}
       <nav className="hidden md:mx-12 md:flex md:w-[576px] md:max-w-xl md:justify-between">
-        {sections.map((item) => {
+        {Object.keys(sections).map((key) => {
           return (
             <a
-              href={item.link}
+              href={sections[key].link}
               className="mx-2 text-sm font-light text-secondary"
             >
-              {item.section}
+              {sections[key].name}
             </a>
           );
         })}
