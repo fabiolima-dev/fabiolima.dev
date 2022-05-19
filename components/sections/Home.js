@@ -9,11 +9,9 @@ export default function Home({ setTitleWidth, titleWidth, section }) {
     function scrollHandler() {
       setPosition(window.pageYOffset);
     }
-
     window.addEventListener("scroll", scrollHandler);
-
+    console.log(titleRef);
     setTitleWidth(titleRef.current.getBoundingClientRect().width);
-
     return () => {
       window.removeEventListener("scroll", scrollHandler);
     };
@@ -29,11 +27,11 @@ export default function Home({ setTitleWidth, titleWidth, section }) {
               opacity: `${-position / 2 + 100}%`,
               bottom: `${position / 10}px`,
             }}
-            className="relative font-mono text-base text-quaternary md:text-2xl"
+            className="relative text-base text-quaternary md:text-xl"
           >
             👋️ Olá, me chamo
           </h3>
-          <div className="my-2 md:my-6">
+          <div className="md: my-2">
             <AnimatePresence>
               {!section && (
                 <motion.h1
@@ -88,7 +86,7 @@ export default function Home({ setTitleWidth, titleWidth, section }) {
               opacity: `${-position / 2 + 100}%`,
               bottom: `${position / 10}px`,
             }}
-            className="relative font-mono text-base text-quaternary md:text-2xl"
+            className="relative text-base text-quaternary md:text-xl"
           >
             Front End Developer e UI Designer
           </h3>
@@ -98,7 +96,7 @@ export default function Home({ setTitleWidth, titleWidth, section }) {
             opacity: `${-position / 2 + 100}% `,
             bottom: `${position / 10}px`,
           }}
-          className="relative w-fit rounded-2xl bg-gray-2 px-6 py-2 text-center font-mono text-sm font-bold text-white md:text-base"
+          className="relative w-fit rounded-2xl bg-gray-2 px-6 py-2 text-center font-mono text-base font-bold text-white md:text-base"
         >
           Aperte ctrl + k para linha de comando
         </h3>

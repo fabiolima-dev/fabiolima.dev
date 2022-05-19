@@ -9,7 +9,7 @@ module.exports = {
         sm: "350px",
       },
       fontFamily: {
-        sans: ["Ubuntu"],
+        sans: ["Inter"],
         mono: ["Fira code"],
       },
       colors: {
