@@ -96,7 +96,7 @@ export default function Home({ setTitleWidth, titleWidth, section }) {
             opacity: `${-position / 2 + 100}% `,
             bottom: `${position / 10}px`,
           }}
-          className="relative w-fit rounded-2xl bg-gray-2 px-6 py-2 text-center font-mono text-base font-bold text-white md:text-base"
+          className="relative w-fit rounded-2xl bg-gray-3 px-6 py-2 text-center font-mono text-base font-bold text-white md:text-base"
         >
           Aperte ctrl + k para linha de comando
         </h3>

@@ -8,7 +8,7 @@
   .dark-theme {
     --color-primary: #000000;
     --color-secondary: #ffffff;
-    --color-tertiary: #95959a;
+    --color-tertiary: #25252a;
     --color-quaternary: #e5e5ea;
 
     --gradient-hyper-one: rgb(255, 78, 165);
@@ -34,7 +34,7 @@
   .light-theme {
     --color-primary: #ffffff;
     --color-secondary: #000000;
-    --color-tertiary: #c5c5ca;
+    --color-tertiary: #35353a;
     --color-quaternary: #35353a;
 
     --gradient-hyper-one: rgb(229, 70, 149);

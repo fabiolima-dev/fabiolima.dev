@@ -1,24 +1,41 @@
-export default function MobileNav({ sections, opened }) {
+import { motion } from "framer-motion";
+
+export default function MobileNav({ sections, open }) {
   return (
-    <div
-      className={`${
-        opened ? "" : "invisible translate-x-full"
-      } fixed top-0 left-0 flex h-screen min-h-[400px] w-screen items-center bg-gray-3 duration-500 ease-in-out md:hidden`}
+    <motion.div
+      // animate={{ opacity: !open ? 0 : 1 }}
+      // transition={{ duration: 0, delay: 0.3 }}
+      className={`fixed top-0 right-0 -z-10 flex w-screen opacity-100 md:hidden`}
     >
-      <nav className="flex h-4/5 flex-col justify-evenly">
-        {Object.keys(sections).map((key) => {
-          return (
-            <div className="flex w-screen items-center justify-between px-10">
+      <div
+        className={`${open ? "" : "hidden"} h-screen w-screen backdrop-blur-sm`}
+      ></div>
+      <motion.div
+        animate={{ translateX: open ? "-100%" : "0%" }}
+        transition={{ type: "tween" }}
+        className="fixed left-full flex h-screen min-h-[400px] w-3/4 items-center bg-tertiary"
+      >
+        <nav className="flex h-4/5 w-full flex-col justify-evenly">
+          {Object.keys(sections).map((key) => {
+            return (
               <div
-                className={`h-12 w-2  rounded-md bg-gradient-to-tr ${sections[key].color}`}
-              ></div>
-              <a href={sections[key].link} className={"text-lg text-white"}>
-                {sections[key].nav}
-              </a>
-            </div>
-          );
-        })}
-      </nav>
-    </div>
+                key={key}
+                className="flex w-full items-center justify-between px-5 sm:px-10"
+              >
+                <div
+                  className={`h-12 w-2 rounded-md bg-gradient-to-tr ${sections[key].color}`}
+                ></div>
+                <a
+                  href={"#" + sections[key].nav}
+                  className={"text-lg text-white"}
+                >
+                  {sections[key].nav}
+                </a>
+              </div>
+            );
+          })}
+        </nav>
+      </motion.div>
+    </motion.div>
   );
 }

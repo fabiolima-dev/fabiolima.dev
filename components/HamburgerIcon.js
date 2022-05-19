@@ -1,31 +1,48 @@
-export default function HamburgerIcon({ handleClick, opened }) {
+import { useState } from "react";
+import { motion } from "framer-motion";
+import MobileNav from "./MobileNav";
+
+export default function HamburgerIcon({ sections }) {
+  const [open, setOpen] = useState(false);
+
+  function handleClick() {
+    setOpen(!open);
+  }
+
   return (
-    <div
-      onClick={handleClick}
-      className="z-10 flex h-4 flex-col items-center justify-between md:hidden"
-    >
+    <div className="z-50 ml-6 w-7 md:hidden">
       <div
-        className={`${
-          opened ? "w-0" : "w-6"
-        } h-[2px] rounded bg-secondary duration-500 ease-in-out`}
-      ></div>
-      <div className="h-[2px] w-6">
-        <div
+        onClick={handleClick}
+        className="flex h-4 flex-col items-center justify-between"
+      >
+        <motion.div
+          animate={{ width: open ? 0 : 24, translateY: open ? 5 : 0 }}
           className={`${
-            opened ? "rotate-45 bg-white" : "bg-secondary"
-          } absolute h-[2px] w-6 rounded duration-500 ease-in-out`}
-        ></div>
-        <div
+            open ? "bg-white" : "bg-secondary"
+          } h-[2px] w-6 rounded bg-secondary`}
+        ></motion.div>
+        <div className="h-[2px] w-6">
+          <motion.div
+            animate={{ rotate: open ? 45 : 0 }}
+            className={`${
+              open ? "bg-white" : "bg-secondary"
+            } absolute h-[2px] w-6 rounded`}
+          ></motion.div>
+          <motion.div
+            animate={{ rotate: open ? -45 : 0 }}
+            className={`${
+              open ? "bg-white" : "bg-secondary"
+            } absolute h-[2px] w-6 rounded `}
+          ></motion.div>
+        </div>
+        <motion.div
+          animate={{ width: open ? 0 : 24, translateY: open ? -5 : 0 }}
           className={`${
-            opened ? "-rotate-45 bg-white" : "bg-secondary"
-          } absolute h-[2px] w-6 rounded duration-500 ease-in-out `}
-        ></div>
+            open ? "bg-white" : "bg-secondary"
+          } h-[2px] w-6 rounded bg-secondary`}
+        ></motion.div>
       </div>
-      <div
-        className={`${
-          opened ? "w-0" : "w-6"
-        } h-[2px] rounded bg-secondary duration-500 ease-in-out`}
-      ></div>
+      <MobileNav sections={sections} open={open} />
     </div>
   );
 }
