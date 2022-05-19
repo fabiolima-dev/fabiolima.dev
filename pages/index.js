@@ -64,9 +64,13 @@ export default function Index() {
         setDarkMode={setDarkMode}
         sections={sections}
       />
-      <main className="w-full max-w-screen-xl px-5 md:px-20 xs:px-10">
+      <main className="w-screen">
         <Home sections={sections} />
-        <div className="h-screen"></div>
+        <div className="h-screen">
+          {/* <div className="relative bottom-80 m-auto h-96 w-3/4 rounded-3xl bg-gray-3">
+            <h1 className="p-10 text-4xl font-bold text-white">Sobre mim</h1>
+          </div> */}
+        </div>
         {/* {Object.keys(sections).map((key) => {
           return (
             <section

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import SectionTitleWrapper from "../SectionTitleWrapper";
 
 export default function Home({ sections }) {
@@ -17,37 +17,39 @@ export default function Home({ sections }) {
   }, []);
 
   return (
-    <div className="flex h-screen flex-col items-center justify-evenly pt-16 sm:items-start">
-      <div className="flex flex-col items-center sm:items-start">
+    <div className="h-screen bg-gradient-to-tl from-slate-900 via-black px-5 md:px-20 xs:px-10">
+      <div className="m-auto flex h-full max-w-screen-xl flex-col items-center justify-evenly pt-16 sm:items-start ">
+        <div className="flex flex-col items-center sm:items-start">
+          <h3
+            style={{
+              opacity: `${-position / 2 + 100}%`,
+              bottom: `${position / 10}px`,
+            }}
+            className="text-center text-base text-secondary md:text-xl"
+          >
+            👋️ Olá, me chamo
+          </h3>
+          <SectionTitleWrapper sections={sections} />
+          <h3
+            style={{
+              opacity: `${-position / 2 + 100}%`,
+              bottom: `${position / 10}px`,
+            }}
+            className="px-8 text-center text-base text-secondary sm:px-0 md:text-xl"
+          >
+            Desenvolvedor Front End e UI Designer.
+          </h3>
+        </div>
         <h3
-          // style={{
-          //   opacity: `${-position / 2 + 100}%`,
-          //   bottom: `${position / 10}px`,
-          // }}
-          className="text-center text-base text-secondary md:text-xl"
+          style={{
+            opacity: `${-position / 2 + 100}% `,
+            bottom: `${position / 10}px`,
+          }}
+          className="mx-8 w-fit rounded-2xl bg-tertiary px-6 py-2 text-center font-mono text-sm font-bold text-white shadow-md sm:mx-0 md:text-base"
         >
-          👋️ Olá, me chamo
-        </h3>
-        <SectionTitleWrapper sections={sections} />
-        <h3
-          // style={{          // style={{
-          //   opacity: `${-position / 2 + 100}%`,
-          //   bottom: `${position / 10}px`,
-          // }}
-          className="px-8 text-center text-base text-secondary sm:px-0 md:text-xl"
-        >
-          Desenvolvedor Front End e UI Designer.
+          Aperte ctrl + k para linha de comando
         </h3>
       </div>
-      <h3
-        // style={{
-        //   opacity: `${-position / 2 + 100}% `,
-        //   bottom: `${position / 10}px`,
-        // }}
-        className="mx-8 w-fit rounded-2xl bg-tertiary px-6 py-2 text-center font-mono text-sm font-bold text-white shadow-md sm:mx-0 md:text-base"
-      >
-        Aperte ctrl + k para linha de comando
-      </h3>
     </div>
   );
 }
