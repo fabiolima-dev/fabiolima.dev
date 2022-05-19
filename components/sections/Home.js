@@ -1,10 +1,8 @@
 import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import SectionTitle from "../SectionTitle";
+import SectionTitleWrapper from "../SectionTitleWrapper";
 
-export default function Home({ setTitleWidth, titleWidth, sections }) {
+export default function Home({ sections }) {
   const [position, setPosition] = useState(0);
-  // const titleRef = useRef();
 
   useEffect(() => {
     function scrollHandler() {
@@ -12,8 +10,6 @@ export default function Home({ setTitleWidth, titleWidth, sections }) {
     }
 
     window.addEventListener("scroll", scrollHandler);
-
-    // setTitleWidth(titleRef.current.getBoundingClientRect().width);
 
     return () => {
       window.removeEventListener("scroll", scrollHandler);
@@ -32,13 +28,13 @@ export default function Home({ setTitleWidth, titleWidth, sections }) {
         >
           👋️ Olá, me chamo
         </h3>
-        <SectionTitle sections={sections} />
+        <SectionTitleWrapper sections={sections} />
         <h3
           // style={{          // style={{
           //   opacity: `${-position / 2 + 100}%`,
           //   bottom: `${position / 10}px`,
           // }}
-          className="text-center text-base text-secondary md:text-xl"
+          className="px-8 text-center text-base text-secondary sm:px-0 md:text-xl"
         >
           Desenvolvedor Front End e UI Designer.
         </h3>
@@ -48,7 +44,7 @@ export default function Home({ setTitleWidth, titleWidth, sections }) {
         //   opacity: `${-position / 2 + 100}% `,
         //   bottom: `${position / 10}px`,
         // }}
-        className="w-fit rounded-2xl bg-tertiary px-6 py-2 text-center font-mono text-sm font-bold text-white md:text-base"
+        className="mx-8 w-fit rounded-2xl bg-tertiary px-6 py-2 text-center font-mono text-sm font-bold text-white shadow-md sm:mx-0 md:text-base"
       >
         Aperte ctrl + k para linha de comando
       </h3>

@@ -10,14 +10,13 @@ import CommandLine from "../components/CommandLine";
 
 export default function Index() {
   const [darkMode, setDarkMode] = useState(true);
-  const [titleWidth, setTitleWidth] = useState(0);
 
   const sections = {
     home: {
       title: "Fabio Lima.",
       nav: "HOME",
       color: "gradient-oceanic",
-      component: <Home setTitleWidth={setTitleWidth} titleWidth={titleWidth} />,
+      component: <Home />,
       vh: "100vh",
     },
     about: {
@@ -66,11 +65,8 @@ export default function Index() {
         sections={sections}
       />
       <main className="w-full max-w-screen-xl px-5 md:px-20 xs:px-10">
-        <Home
-          setTitleWidth={setTitleWidth}
-          titleWidth={titleWidth}
-          sections={sections}
-        />
+        <Home sections={sections} />
+        <div className="h-screen"></div>
         {/* {Object.keys(sections).map((key) => {
           return (
             <section
