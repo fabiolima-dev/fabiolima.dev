@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500;700&family=Inter:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500;700&family=Inter:wght@300;500;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,8 +8,7 @@
   .dark-theme {
     --color-primary: #000000;
     --color-secondary: #ffffff;
-    --color-tertiary: #25252a;
-    --color-quaternary: #e5e5ea;
+    --color-tertiary: #18181a;
 
     --gradient-hyper-one: rgb(255, 78, 165);
     --gradient-hyper-two: rgb(255, 73, 73);
@@ -35,7 +34,6 @@
     --color-primary: #ffffff;
     --color-secondary: #000000;
     --color-tertiary: #35353a;
-    --color-quaternary: #35353a;
 
     --gradient-hyper-one: rgb(229, 70, 149);
     --gradient-hyper-two: rgb(229, 65, 65);

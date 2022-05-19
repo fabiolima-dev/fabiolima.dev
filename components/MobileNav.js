@@ -20,7 +20,7 @@ export default function MobileNav({ sections, open }) {
             return (
               <div
                 key={key}
-                className="flex w-full items-center justify-between px-5 sm:px-10"
+                className="flex w-full items-center justify-between px-5 xs:px-10"
               >
                 <div
                   className={`h-12 w-2 rounded-md bg-gradient-to-tr ${sections[key].color}`}
