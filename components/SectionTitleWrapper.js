@@ -2,16 +2,16 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import SectionTitle from "./SectionTitle";
 
-export default function SectionTitleWrapper({}) {
+export default function SectionTitleWrapper({ sections }) {
   const [fixed, setFixed] = useState(false);
   const titleRef = useRef();
   const wrapperRef = useRef();
 
   useEffect(() => {
     function scrollHandler() {
-      if (titleRef.current.getBoundingClientRect().top < 63.9) {
+      if (titleRef.current.getBoundingClientRect().top < 79.9) {
         setFixed(true);
-      } else if (wrapperRef.current.getBoundingClientRect().top > 88) {
+      } else if (wrapperRef.current.getBoundingClientRect().top > 104) {
         setFixed(false);
       }
     }
@@ -29,7 +29,7 @@ export default function SectionTitleWrapper({}) {
       <div
         ref={titleRef}
         style={{ position: fixed ? "fixed" : "static" }}
-        className="top-16 w-fit"
+        className="top-20 w-fit"
       >
         <SectionTitle />
         <div className="relative h-0 w-full">

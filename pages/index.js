@@ -66,11 +66,10 @@ export default function Index() {
       />
       <main className="w-full">
         <Home sections={sections} />
-        <div className="h-screen">
-          {/* <div className="relative bottom-80 m-auto h-96 w-3/4 rounded-3xl bg-gray-3">
+        <About />
+        {/* <div className="relative bottom-80 m-auto h-96 w-3/4 rounded-3xl bg-gray-3">
             <h1 className="p-10 text-4xl font-bold text-white">Sobre mim</h1>
           </div> */}
-        </div>
         {/* {Object.keys(sections).map((key) => {
           return (
             <section
