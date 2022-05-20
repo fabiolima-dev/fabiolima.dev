@@ -64,7 +64,7 @@ export default function Index() {
         setDarkMode={setDarkMode}
         sections={sections}
       />
-      <main className="w-screen">
+      <main className="w-full">
         <Home sections={sections} />
         <div className="h-screen">
           {/* <div className="relative bottom-80 m-auto h-96 w-3/4 rounded-3xl bg-gray-3">

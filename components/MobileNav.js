@@ -3,8 +3,6 @@ import { motion } from "framer-motion";
 export default function MobileNav({ sections, open }) {
   return (
     <motion.div
-      // animate={{ opacity: !open ? 0 : 1 }}
-      // transition={{ duration: 0, delay: 0.3 }}
       className={`fixed top-0 right-0 -z-10 flex w-screen opacity-100 md:hidden`}
     >
       <div
@@ -27,7 +25,7 @@ export default function MobileNav({ sections, open }) {
                 ></div>
                 <a
                   href={"#" + sections[key].nav}
-                  className={"text-lg text-white"}
+                  className={"text-sm text-white"}
                 >
                   {sections[key].nav}
                 </a>
