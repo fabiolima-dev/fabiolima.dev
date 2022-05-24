@@ -9,6 +9,7 @@
     --color-primary: #000000;
     --color-secondary: #ffffff;
     --color-tertiary: #18181a;
+    --color-slate: #090e1a;
 
     --gradient-hyper-one: rgb(255, 78, 165);
     --gradient-hyper-two: rgb(255, 73, 73);
@@ -34,6 +35,7 @@
     --color-primary: #ffffff;
     --color-secondary: #000000;
     --color-tertiary: #35353a;
+    --color-slate: #f1f5f9;
 
     --gradient-hyper-one: rgb(229, 70, 149);
     --gradient-hyper-two: rgb(229, 65, 65);

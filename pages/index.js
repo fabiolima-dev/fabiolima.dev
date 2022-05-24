@@ -3,8 +3,8 @@ import { useInView } from "react-intersection-observer";
 import Head from "next/head";
 import Header from "../components/sections/Header";
 import Home from "../components/sections/Home";
-import Projects from "../components/sections/Projects";
 import About from "../components/sections/About";
+import Projects from "../components/sections/Projects";
 import Contact from "../components/sections/Contact";
 import CommandLine from "../components/CommandLine";
 
@@ -67,6 +67,8 @@ export default function Index() {
       <main className="w-full">
         <Home sections={sections} />
         <About />
+        <Projects />
+        <Contact />
         {/* <div className="relative bottom-80 m-auto h-96 w-3/4 rounded-3xl bg-gray-3">
             <h1 className="p-10 text-4xl font-bold text-white">Sobre mim</h1>
           </div> */}

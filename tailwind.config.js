@@ -4,10 +4,17 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    /*Because the xs breakpoint was included, is necessary overwrite the breakpoints,
+    for prettier-tailwind sort in the right order.*/
+    screens: {
+      xs: "350px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
     extend: {
-      screens: {
-        xs: "350px",
-      },
       fontFamily: {
         sans: ["Inter"],
         mono: ["Fira code"],
@@ -22,6 +29,7 @@ module.exports = {
         secondary: "var(--color-secondary)",
         tertiary: "var(--color-tertiary)",
         quaternary: "var(--color-quaternary)",
+        slate: "var(--color-slate)",
       },
     },
   },

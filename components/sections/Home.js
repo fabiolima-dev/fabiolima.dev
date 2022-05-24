@@ -3,11 +3,11 @@ import SectionTitleWrapper from "../SectionTitleWrapper";
 
 export default function Home({ sections }) {
   const { scrollYProgress } = useViewportScroll();
-  const translate = useTransform(scrollYProgress, [0, 0.2], [0, -25]);
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+  const translate = useTransform(scrollYProgress, [0, 0.1], [0, -15]);
+  const opacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
 
   return (
-    <section className="h-screen bg-gradient-to-tl from-slate-900 via-primary px-5 md:px-20 xs:px-10">
+    <section className="h-screen bg-gradient-to-tl from-slate via-primary px-5 xs:px-10 md:px-20 ">
       <div className="m-auto flex h-full max-w-screen-xl flex-col items-center justify-evenly pt-16 sm:items-start">
         <div className="flex flex-col">
           <motion.h3
