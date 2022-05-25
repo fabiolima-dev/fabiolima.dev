@@ -52,7 +52,7 @@ export default function Index() {
     <div
       className={`${
         darkMode ? "dark-theme" : "light-theme"
-      } box-border flex flex-col items-center bg-primary`}
+      } box-border flex flex-col items-center bg-primary px-5 xs:px-10 md:px-20`}
     >
       <Head>
         <title>Fabio Lima</title>
@@ -64,52 +64,11 @@ export default function Index() {
         setDarkMode={setDarkMode}
         sections={sections}
       />
-      <main className="w-full">
-        <Home sections={sections} />
+      <main className="w-full max-w-screen-lg">
+        <Home />
         <About />
         <Projects />
         <Contact />
-        {/* <div className="relative bottom-80 m-auto h-96 w-3/4 rounded-3xl bg-gray-3">
-            <h1 className="p-10 text-4xl font-bold text-white">Sobre mim</h1>
-          </div> */}
-        {/* {Object.keys(sections).map((key) => {
-          return (
-            <section
-              id={sections[key].nav}
-              className={`h-screen w-full`}
-              ref={sections[key].ref}
-            >
-              <SectionTitle
-                key={sections[key].nav}
-                titleWidth={titleWidth}
-                setTitleWidth={setTitleWidth}
-                section={sections[key]}
-              />
-              {sections[key].component}
-            </section>
-          );
-        })} */}
-        {/* <section>
-          <Home
-            setTitleWidth={setTitleWidth}
-            titleWidth={titleWidth}
-            section={projectsInView}
-          />
-        </section>
-        <section ref={projectsRef}>
-          <SectionTitle
-            titleWidth={titleWidth}
-            view={projectsInView}
-            section={sections.projects}
-          />
-          <Projects section={projectsInView} />
-        </section>
-        <SectionTitle
-          titleWidth={titleWidth}
-          view={projectsInView}
-          section={sections.skills}
-        />
-        <section className="h-screen w-full"></section> */}
         <CommandLine />
       </main>
     </div>

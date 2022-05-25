@@ -1,36 +1,70 @@
-import { motion, useTransform, useViewportScroll } from "framer-motion";
-import SectionTitleWrapper from "../SectionTitleWrapper";
+import { motion } from "framer-motion";
+import SectionTitle from "../SectionTitle";
 
-export default function Home({ sections }) {
-  const { scrollYProgress } = useViewportScroll();
-  const translate = useTransform(scrollYProgress, [0, 0.1], [0, -15]);
-  const opacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
+export default function Home() {
+  const reveal = {
+    initial: {
+      opacity: 0,
+      y: 30,
+    },
+    animate: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: { type: "tween", delay: i * 0.1 },
+    }),
+  };
+
+  const shake = {
+    initial: { rotate: 0 },
+    animate: (i) => ({
+      rotate: [0, 20, 0, 20, 0],
+      transition: { type: "tween", delay: i * 0.1 },
+    }),
+  };
 
   return (
-    <section className="h-screen bg-gradient-to-tl from-slate via-primary px-5 xs:px-10 md:px-20 ">
-      <div className="m-auto flex h-full max-w-screen-xl flex-col items-center justify-evenly pt-16 sm:items-start">
-        <div className="flex flex-col">
-          <motion.h3
-            style={{ translateY: translate, opacity: opacity }}
-            className="text-base text-secondary md:text-xl"
-          >
-            👋️ Olá, me chamo
-          </motion.h3>
-          <SectionTitleWrapper sections={sections} />
-          <motion.h3
-            style={{ translateY: translate, opacity: opacity }}
-            className="text-base text-secondary sm:px-0 md:text-xl"
-          >
-            Desenvolvedor Front End e UI Designer.
-          </motion.h3>
-        </div>
+    <section className="flex h-screen flex-col items-center justify-evenly pt-16 sm:items-start">
+      <motion.div
+        initial="initial"
+        animate="animate"
+        custom={0}
+        variants={reveal}
+        className="flex flex-col"
+      >
         <motion.h3
-          style={{ translateY: translate, opacity: opacity }}
-          className="mx-8 w-fit rounded-2xl bg-tertiary px-6 py-2 text-center font-mono text-sm font-bold text-white shadow-md sm:mx-0 md:text-base"
+          custom={0}
+          variants={reveal}
+          className="text-base text-secondary md:text-xl"
         >
-          Aperte ctrl + k para linha de comando
+          <motion.span
+            custom={20}
+            variants={shake}
+            className="inline-block origin-[90%_90%]"
+          >
+            👋️
+          </motion.span>{" "}
+          Olá, me chamo
         </motion.h3>
-      </div>
+        <motion.div custom={1} variants={reveal} className="my-4 md:my-6">
+          <SectionTitle />
+        </motion.div>
+        <motion.h3
+          custom={2}
+          variants={reveal}
+          className="text-base text-secondary md:text-xl"
+        >
+          Desenvolvedor Front End e UI Designer.
+        </motion.h3>
+      </motion.div>
+      <motion.h3
+        initial="initial"
+        animate="animate"
+        custom={3}
+        variants={reveal}
+        className="mx-8 w-fit rounded-md bg-tertiary px-6 py-2 text-center font-mono text-sm font-bold text-white hover:drop-shadow-md sm:mx-0 md:text-base"
+      >
+        Aperte ctrl + k para linha de comando
+      </motion.h3>
     </section>
   );
 }

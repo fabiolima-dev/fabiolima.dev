@@ -3,7 +3,7 @@ import DarkModeIcon from "../DarkModeIcon";
 
 export default function Header({ darkMode, setDarkMode, sections }) {
   return (
-    <header className="fixed z-50 flex h-16 w-screen items-center justify-between bg-primary px-5 md:px-20 xs:px-10">
+    <header className="fixed z-50 flex h-16 w-screen items-center justify-between bg-primary px-5 xs:px-10 md:px-20">
       <h1 className="text-sm text-secondary">LOGO</h1>
       {/* Larger Screens navbar */}
       <nav className="hidden md:block">

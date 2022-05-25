@@ -50,22 +50,26 @@ export default function Technologies() {
 
   return (
     <motion.div
-      style={{ opacity: opacity, translateY: translateTechnologies }}
-      className="-mt-80 text-xl text-secondary opacity-0"
+      // style={{ opacity: opacity, translateY: translateTechnologies }}
+      className="text-base text-secondary"
     >
       <h1 className="mb-10">Tecnologias que tenho usado recentemente</h1>
-      <div className="absolute flex h-32 w-full overflow-hidden">
-        {positions.map(() => {
+      <div className="flex h-32 w-full overflow-hidden">
+        {positions.map((key) => {
           return (
             <motion.div
               animate={{ translateX: "-100%" }}
               transition={{ repeat: Infinity, duration: 35, ease: "linear" }}
               className={`mt-4 inline`}
+              key={key}
             >
               <div className="flex">
                 {Object.keys(technologies).map((key) => {
                   return (
-                    <div className="group mr-10 h-12 w-16 shrink-0 flex-col items-center justify-between grayscale hover:scale-110 hover:grayscale-0">
+                    <div
+                      key={key}
+                      className="group mr-10 h-12 w-16 shrink-0 flex-col items-center justify-between grayscale hover:scale-110 hover:grayscale-0"
+                    >
                       {technologies[key]}
                       <div className="flex justify-center">
                         <p className="mt-4 hidden w-min text-center text-sm group-hover:block">
