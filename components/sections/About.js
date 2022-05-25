@@ -14,7 +14,7 @@ export default function About({ section, reveal }) {
         whileInView="animate"
         custom={3}
         variants={reveal}
-        className="my-10 text-base leading-loose text-gray-1"
+        className="my-10 leading-loose text-gray-1"
       >
         Olá, meu nome é{" "}
         <span className="text-secondary">Fabio Henrique de Lima.</span> Sou de
@@ -32,6 +32,9 @@ export default function About({ section, reveal }) {
         novas e me manter atualizado de novas tecnologias. Deste modo, também me
         interesso em tecnologias de backend.
       </motion.p>
+      <motion.button className="h-12 w-40 rounded-sm bg-tertiary text-white">
+        Baixar resumo
+      </motion.button>
       <motion.div
         initial="initial"
         whileInView="animate"

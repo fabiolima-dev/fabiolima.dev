@@ -53,7 +53,7 @@ export default function Index() {
     <div
       className={`${
         darkMode ? "dark-theme" : "light-theme"
-      } box-border flex min-w-[300px] flex-col items-center bg-primary px-5 xs:px-10 md:px-20`}
+      } box-border flex min-w-[300px] flex-col items-center bg-primary px-5 text-secondary xs:px-10 md:px-20`}
     >
       <Head>
         <title>Fabio Lima</title>
@@ -69,7 +69,7 @@ export default function Index() {
         <Home section={sections.home} reveal={reveal} />
         <About section={sections.about} reveal={reveal} />
         <Projects section={sections.projects} />
-        <Contact />
+        <Contact section={sections.contact} />
         <CommandLine />
       </main>
     </div>

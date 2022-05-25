@@ -23,10 +23,7 @@ export default function MobileNav({ sections, open }) {
                 <div
                   className={`h-12 w-2 rounded-md bg-gradient-to-tr ${sections[key].color}`}
                 ></div>
-                <a
-                  href={"#" + sections[key].id}
-                  className={"text-sm text-white"}
-                >
+                <a href={"#" + sections[key].id} className={"text-white"}>
                   {sections[key].nav}
                 </a>
               </div>

@@ -16,18 +16,6 @@ import EslintIcon from "./technologies-icons/eslint-icon.svg";
 import FigmaIcon from "./technologies-icons/figma-icon.svg";
 
 export default function Technologies() {
-  const { scrollYProgress } = useViewportScroll();
-  const translateTechnologies = useTransform(
-    scrollYProgress,
-    [0.2, 0.3],
-    [0, -25]
-  );
-  const opacity = useTransform(
-    scrollYProgress,
-    [0.2, 0.3, 0.8, 0.9],
-    [0, 1, 1, 0]
-  );
-
   const technologies = {
     "Command Line": <CliIcon />,
     Npm: <NpmIcon />,
@@ -49,12 +37,9 @@ export default function Technologies() {
   const positions = [1, 2];
 
   return (
-    <motion.div
-      // style={{ opacity: opacity, translateY: translateTechnologies }}
-      className="text-base text-secondary"
-    >
-      <h1 className="mb-10">Tecnologias que tenho usado recentemente</h1>
-      <div className="flex h-32 w-full overflow-hidden">
+    <div className="text-secondary">
+      <h3 className="mb-10">Tecnologias que tenho usado recentemente</h3>
+      <div className="flex h-36 w-full overflow-hidden">
         {positions.map((key) => {
           return (
             <motion.div
@@ -72,7 +57,7 @@ export default function Technologies() {
                     >
                       {technologies[key]}
                       <div className="flex justify-center">
-                        <p className="mt-4 hidden w-min text-center text-sm group-hover:block">
+                        <p className="mt-4 hidden w-min rounded-sm bg-tertiary p-1 px-3 text-center text-sm text-white group-hover:block">
                           {key}
                         </p>
                       </div>
@@ -84,6 +69,6 @@ export default function Technologies() {
           );
         })}
       </div>
-    </motion.div>
+    </div>
   );
 }

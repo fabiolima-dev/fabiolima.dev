@@ -30,7 +30,7 @@ export default function SectionTitle({ section }) {
       <motion.h1
         whileInView="animate"
         variants={fill}
-        className="w-max text-center text-5xl font-extrabold [-webkit-text-fill-color:var(--color-primary)] [text-shadow:1px_1px_var(--color-secondary),1px_-1px_var(--color-secondary),-1px_1px_var(--color-secondary),-1px_-1px_var(--color-secondary)] md:text-6xl"
+        className="w-max text-center [-webkit-text-fill-color:var(--color-primary)] [text-shadow:1px_1px_var(--color-secondary),1px_-1px_var(--color-secondary),-1px_1px_var(--color-secondary),-1px_-1px_var(--color-secondary)] md:text-6xl"
       >
         {section.title}
       </motion.h1>

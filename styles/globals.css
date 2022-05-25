@@ -9,7 +9,7 @@
     --color-primary: #000000;
     --color-secondary: #ffffff;
     --color-tertiary: #18181a;
-    --color-slate: #090e1a;
+    --color-quaternary: #7b7b80;
 
     --gradient-hyper-one: rgb(255, 78, 165);
     --gradient-hyper-two: rgb(255, 73, 73);
@@ -35,7 +35,7 @@
     --color-primary: #ffffff;
     --color-secondary: #000000;
     --color-tertiary: #35353a;
-    --color-slate: #f1f5f9;
+    --color-quaternary: #adadb2;
 
     --gradient-hyper-one: rgb(229, 70, 149);
     --gradient-hyper-two: rgb(229, 65, 65);
@@ -56,6 +56,15 @@
     --gradient-sunset-one: rgb(122, 139, 204);
     --gradient-sunset-two: rgb(229, 161, 161);
     --gradient-sunset-three: rgb(229, 225, 176);
+  }
+  h1 {
+    @apply text-5xl font-extrabold;
+  }
+  h2 {
+    @apply text-2xl font-bold;
+  }
+  a {
+    @apply text-xs;
   }
 }
 

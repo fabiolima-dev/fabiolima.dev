@@ -22,11 +22,7 @@ export default function Home({ section, reveal }) {
         variants={reveal}
         className="flex flex-col"
       >
-        <motion.h3
-          custom={0}
-          variants={reveal}
-          className="text-base text-secondary md:text-xl"
-        >
+        <motion.h3 custom={0} variants={reveal} className="text-secondary">
           <motion.span
             custom={20}
             variants={shake}
@@ -39,11 +35,7 @@ export default function Home({ section, reveal }) {
         <motion.div custom={1} variants={reveal} className="my-4 md:my-6">
           <SectionTitle section={section} />
         </motion.div>
-        <motion.h3
-          custom={2}
-          variants={reveal}
-          className="text-base text-secondary md:text-xl"
-        >
+        <motion.h3 custom={2} variants={reveal} className="text-secondary">
           Desenvolvedor Front End e UI Designer.
         </motion.h3>
       </motion.div>
@@ -52,7 +44,7 @@ export default function Home({ section, reveal }) {
         animate="animate"
         custom={4}
         variants={reveal}
-        className="mx-8 w-fit rounded-md bg-tertiary px-6 py-2 text-center font-mono text-sm font-bold text-white hover:drop-shadow-md sm:mx-0 md:text-base"
+        className="mx-8 w-fit rounded-md bg-tertiary px-6 py-2 text-center font-mono font-bold text-white hover:drop-shadow-md sm:mx-0"
       >
         Aperte ctrl + k para linha de comando
       </motion.h3>
