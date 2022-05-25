@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useInView } from "react-intersection-observer";
 import Head from "next/head";
 import Header from "../components/sections/Header";
 import Home from "../components/sections/Home";
@@ -38,17 +37,23 @@ export default function Index() {
     },
   };
 
-  Object.keys(sections).forEach((key) => {
-    [sections[key].ref, sections[key].inView] = useInView({
-      threshold: 0.5,
-    });
-  });
+  const reveal = {
+    initial: {
+      opacity: 0,
+      y: 30,
+    },
+    animate: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: { type: "tween", delay: i * 0.1 },
+    }),
+  };
 
   return (
     <div
       className={`${
         darkMode ? "dark-theme" : "light-theme"
-      } box-border flex flex-col items-center bg-primary px-5 xs:px-10 md:px-20`}
+      } box-border flex min-w-[300px] flex-col items-center bg-primary px-5 xs:px-10 md:px-20`}
     >
       <Head>
         <title>Fabio Lima</title>
@@ -61,9 +66,9 @@ export default function Index() {
         sections={sections}
       />
       <main className="w-full max-w-screen-lg">
-        <Home section={sections.home} />
-        <About section={sections.about} />
-        <Projects />
+        <Home section={sections.home} reveal={reveal} />
+        <About section={sections.about} reveal={reveal} />
+        <Projects section={sections.projects} />
         <Contact />
         <CommandLine />
       </main>

@@ -1,19 +1,7 @@
 import { motion } from "framer-motion";
 import SectionTitle from "../SectionTitle";
 
-export default function Home({ section }) {
-  const reveal = {
-    initial: {
-      opacity: 0,
-      y: 30,
-    },
-    animate: (i) => ({
-      opacity: 1,
-      y: 0,
-      transition: { type: "tween", delay: i * 0.1 },
-    }),
-  };
-
+export default function Home({ section, reveal }) {
   const shake = {
     initial: { rotate: 0 },
     animate: (i) => ({
@@ -29,7 +17,7 @@ export default function Home({ section }) {
     >
       <motion.div
         initial="initial"
-        animate="animate"
+        whileInView="animate"
         custom={0}
         variants={reveal}
         className="flex flex-col"
@@ -62,7 +50,7 @@ export default function Home({ section }) {
       <motion.h3
         initial="initial"
         animate="animate"
-        custom={3}
+        custom={4}
         variants={reveal}
         className="mx-8 w-fit rounded-md bg-tertiary px-6 py-2 text-center font-mono text-sm font-bold text-white hover:drop-shadow-md sm:mx-0 md:text-base"
       >
