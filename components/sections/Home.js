@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import SectionTitle from "../SectionTitle";
 
-export default function Home() {
+export default function Home({ section }) {
   const reveal = {
     initial: {
       opacity: 0,
@@ -23,7 +23,10 @@ export default function Home() {
   };
 
   return (
-    <section className="flex h-screen flex-col items-center justify-evenly pt-16 sm:items-start">
+    <section
+      id={section.id}
+      className="flex h-screen flex-col items-center justify-evenly pt-16 sm:items-start"
+    >
       <motion.div
         initial="initial"
         animate="animate"
@@ -46,7 +49,7 @@ export default function Home() {
           Olá, me chamo
         </motion.h3>
         <motion.div custom={1} variants={reveal} className="my-4 md:my-6">
-          <SectionTitle />
+          <SectionTitle section={section} />
         </motion.div>
         <motion.h3
           custom={2}

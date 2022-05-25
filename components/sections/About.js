@@ -2,7 +2,7 @@ import { motion, useTransform, useViewportScroll } from "framer-motion";
 import SectionTitle from "../SectionTitle";
 import Technologies from "../Technologies";
 
-export default function About() {
+export default function About({ section }) {
   const { scrollYProgress } = useViewportScroll();
   const translateAbout = useTransform(
     scrollYProgress,
@@ -23,7 +23,7 @@ export default function About() {
   return (
     <section className="px-5 xs:px-10 md:px-20">
       <div className="m-auto mt-20 flex min-h-screen max-w-screen-lg flex-col justify-evenly">
-        <SectionTitle />
+        <SectionTitle section={section} />
         <p className=" text-base leading-loose text-gray-1">
           Olá, meu nome é{" "}
           <span className="text-secondary">Fabio Henrique de Lima.</span> Sou de

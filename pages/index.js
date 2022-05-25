@@ -16,29 +16,25 @@ export default function Index() {
       title: "Fabio Lima.",
       nav: "HOME",
       color: "gradient-oceanic",
-      component: <Home />,
-      vh: "100vh",
+      id: "home",
     },
     about: {
       title: "Sobre.",
       nav: "SOBRE",
-      color: "gradient-mojave",
-      component: <About />,
-      vh: "100vh",
+      color: "gradient-sunset",
+      id: "sobre",
     },
     projects: {
       title: "Projetos.",
       nav: "PROJETOS",
       color: "gradient-hyper",
-      component: <Projects />,
-      vh: "100vh",
+      id: "projetos",
     },
     contact: {
       title: "Contato.",
       nav: "CONTATO",
       color: "gradient-candy",
-      component: <Contact />,
-      vh: "100vh",
+      id: "contato",
     },
   };
 
@@ -65,8 +61,8 @@ export default function Index() {
         sections={sections}
       />
       <main className="w-full max-w-screen-lg">
-        <Home />
-        <About />
+        <Home section={sections.home} />
+        <About section={sections.about} />
         <Projects />
         <Contact />
         <CommandLine />

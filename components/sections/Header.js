@@ -11,7 +11,7 @@ export default function Header({ darkMode, setDarkMode, sections }) {
           return (
             <a
               key={key}
-              href={`./#${sections[key].nav}`}
+              href={`./#${sections[key].id}`}
               className="mx-8 text-xs text-gray-1"
             >
               {sections[key].nav}
