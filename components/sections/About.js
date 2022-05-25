@@ -6,7 +6,7 @@ export default function About({ section, reveal }) {
   return (
     <section
       id={section.id}
-      className="flex min-h-screen flex-col justify-evenly pt-16"
+      className="flex min-h-screen flex-col justify-evenly gap-10 pt-16"
     >
       <SectionTitle section={section} />
       <motion.p
@@ -14,7 +14,7 @@ export default function About({ section, reveal }) {
         whileInView="animate"
         custom={3}
         variants={reveal}
-        className="my-10 leading-loose text-gray-1"
+        className="leading-loose text-gray-1"
       >
         Olá, meu nome é{" "}
         <span className="text-secondary">Fabio Henrique de Lima.</span> Sou de
