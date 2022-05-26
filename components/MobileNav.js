@@ -2,9 +2,7 @@ import { motion } from "framer-motion";
 
 export default function MobileNav({ sections, open }) {
   return (
-    <motion.div
-      className={`fixed top-0 right-0 -z-10 flex w-screen opacity-100 md:hidden`}
-    >
+    <motion.div className="fixed top-0 right-0 -z-10 flex w-screen opacity-100 md:hidden">
       <div
         className={`${open ? "" : "hidden"} h-screen w-screen backdrop-blur-sm`}
       ></div>

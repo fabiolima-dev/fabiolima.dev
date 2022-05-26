@@ -2,12 +2,13 @@ import { useState } from "react";
 import SectionTitle from "../SectionTitle";
 import FeaturedProject from "../FeaturedProject";
 import projects from "../../data/projects";
+import OtherProject from "../OtherProject";
 
 export default function Projects({ section }) {
   const [projectOrder, setProjectOrder] = useState(1);
 
-  function handleClick() {
-    console.log("clicking");
+  function handleClick(e) {
+    setProjectOrder(e.target.id);
   }
 
   return (
@@ -19,18 +20,23 @@ export default function Projects({ section }) {
       <div className="flex">
         <div className="flex flex-col gap-4 md:pr-20">
           <div className="flex h-10 w-full justify-between bg-tertiary text-gray-1">
-            {projects.feature.map((project) => {
+            {projects.feature.map((project, index) => {
               return (
                 <h3
+                  id={index}
+                  key={index}
                   onClick={handleClick}
-                  className="relative flex w-full items-center justify-center bg-tertiary p-2 text-center hover:bg-primary hover:text-secondary"
+                  className={`${
+                    projectOrder === index
+                      ? "bg-primary text-secondary"
+                      : "bg-tertiary"
+                  } relative flex w-full items-center justify-center p-2 text-center hover:bg-primary hover:text-secondary`}
                 >
                   {project.name}
                 </h3>
               );
             })}
           </div>
-
           <FeaturedProject project={projects.feature[projectOrder]} />
         </div>
 
@@ -74,48 +80,9 @@ export default function Projects({ section }) {
       <div className="flex flex-col gap-4">
         <h2>Outros projetos</h2>
         <div className="flex flex-col gap-4 md:flex-row">
-          <div className="flex w-full flex-col justify-evenly gap-4 rounded-md border-[1px] border-quaternary p-4">
-            <h3 className="font-bold">Calculadora Javascript</h3>
-            <li className="flex flex-wrap gap-4 text-white">
-              <ul className="rounded-sm bg-tertiary py-[4px] px-2">React</ul>
-              <ul className="rounded-md bg-tertiary py-[4px] px-2">
-                Styled Components
-              </ul>
-              <ul className="rounded-sm bg-tertiary py-[4px] px-2">Firebase</ul>
-            </li>
-            <div className="flex gap-4 text-xl">
-              <i className="ri-github-line"></i>
-              <i className="ri-link"></i>
-            </div>
-          </div>
-          <div className="flex w-full flex-col justify-evenly gap-4 rounded-md border-[1px] border-quaternary p-4">
-            <h3 className="font-bold">Restaurante</h3>
-            <li className="flex flex-wrap gap-4 text-white">
-              <ul className="rounded-sm bg-tertiary py-[4px] px-2">React</ul>
-              <ul className="rounded-md bg-tertiary py-[4px] px-2">
-                Styled Components
-              </ul>
-              <ul className="rounded-sm bg-tertiary py-[4px] px-2">Firebase</ul>
-            </li>
-            <div className="flex gap-4 text-xl">
-              <i className="ri-github-line"></i>
-              <i className="ri-link"></i>
-            </div>
-          </div>
-          <div className="flex w-full flex-col justify-evenly gap-4 rounded-md border-[1px] border-quaternary p-4">
-            <h3 className="font-bold">Título</h3>
-            <li className="flex flex-wrap gap-4 text-white">
-              <ul className="rounded-sm bg-tertiary py-[4px] px-2">React</ul>
-              <ul className="rounded-md bg-tertiary py-[4px] px-2">
-                Styled Components
-              </ul>
-              <ul className="rounded-sm bg-tertiary py-[4px] px-2">Firebase</ul>
-            </li>
-            <div className="flex gap-4 text-xl">
-              <i className="ri-github-line"></i>
-              <i className="ri-link"></i>
-            </div>
-          </div>
+          {projects.others.map((project) => {
+            return <OtherProject project={project} />;
+          })}
         </div>
       </div>
     </section>
