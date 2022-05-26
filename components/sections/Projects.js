@@ -1,6 +1,15 @@
+import { useState } from "react";
 import SectionTitle from "../SectionTitle";
+import FeaturedProject from "../FeaturedProject";
+import projects from "../../data/projects";
 
 export default function Projects({ section }) {
+  const [projectOrder, setProjectOrder] = useState(1);
+
+  function handleClick() {
+    console.log("clicking");
+  }
+
   return (
     <section
       id={section.id}
@@ -9,50 +18,27 @@ export default function Projects({ section }) {
       <SectionTitle section={section} />
       <div className="flex">
         <div className="flex flex-col gap-4 md:pr-20">
-          <div className="flex gap-8 text-gray-1">
-            <h3 className="text-white">Fleet Webapp</h3>
-            <h3>Título 2</h3>
-            <h3>Título 3</h3>
+          <div className="flex h-10 w-full justify-between bg-tertiary text-gray-1">
+            {projects.feature.map((project) => {
+              return (
+                <h3
+                  onClick={handleClick}
+                  className="relative flex w-full items-center justify-center bg-tertiary p-2 text-center hover:bg-primary hover:text-secondary"
+                >
+                  {project.name}
+                </h3>
+              );
+            })}
           </div>
-          <div className="flex flex-col gap-4">
-            <div>
-              <h2>Fleet Webapp</h2>
-              <h3>2022</h3>
-            </div>
-            <li className="flex gap-8">
-              <ul>
-                <i className="ri-checkbox-line"></i> Design
-              </ul>
-              <ul className="text-gray-1">
-                <i className="ri-checkbox-blank-line"></i> Desenvolvimento
-              </ul>
-            </li>
-            <p className="text-gray-1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse ac magna facilisis, accumsan orci a, vehicula magna.
-              Aliquam laoreet orci sed ligula gravida fringilla. Ut non sagittis
-              ante. Ut sed cursus tortor. Quisque iaculis sed mauris nec
-              ultrices.{" "}
-            </p>
-            <li className="flex flex-wrap gap-4 text-white">
-              <ul className="rounded-sm bg-tertiary py-[4px] px-2">React</ul>
-              <ul className="rounded-md bg-tertiary py-[4px] px-2">
-                Styled Components
-              </ul>
-              <ul className="rounded-sm bg-tertiary py-[4px] px-2">Firebase</ul>
-            </li>
-            <div className="flex gap-8 text-3xl">
-              <i className="ri-github-line"></i>
-              <i className="ri-link"></i>
-            </div>
-          </div>
+
+          <FeaturedProject project={projects.feature[projectOrder]} />
         </div>
 
-        {/* Preview div */}
+        {/* Projects Preview */}
 
         <div className="relative hidden w-5/12 shrink-0 md:block">
-          <div className="gradient-hyper absolute bottom-0 h-[400px] w-[600px] -rotate-12 rounded-lg bg-gradient-to-tr"></div>
-          <div className="absolute left-10 -top-10 flex w-[500px] justify-center">
+          <div className="gradient-hyper absolute -left-10 h-[320px] w-[540px] -rotate-12 -skew-y-6 rounded-lg bg-gradient-to-tr"></div>
+          <div className="absolute flex w-[500px] justify-center">
             <img
               className="absolute"
               alt="Foto versão desktop do projeto 1"
@@ -66,7 +52,7 @@ export default function Projects({ section }) {
               src="/../../ipad-mockup.png"
             ></img>
           </div>
-          <div className="absolute h-[500px] w-[100px]">
+          <div className="absolute top-36 -left-4 w-[100px]">
             <img
               className="absolute"
               alt="Foto versão mobile do projeto 1"
@@ -82,6 +68,9 @@ export default function Projects({ section }) {
           </div>
         </div>
       </div>
+
+      {/* Other Projects */}
+
       <div className="flex flex-col gap-4">
         <h2>Outros projetos</h2>
         <div className="flex flex-col gap-4 md:flex-row">

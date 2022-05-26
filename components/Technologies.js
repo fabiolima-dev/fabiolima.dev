@@ -57,7 +57,7 @@ export default function Technologies() {
                     >
                       {technologies[key]}
                       <div className="flex justify-center">
-                        <p className="hidden w-min rounded-sm bg-tertiary p-1 px-3 text-center text-sm text-white group-hover:block">
+                        <p className="mt-4 hidden w-min rounded-sm bg-tertiary p-1 px-3 text-center text-sm text-white group-hover:block">
                           {key}
                         </p>
                       </div>
