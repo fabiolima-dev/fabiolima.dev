@@ -10,6 +10,8 @@ const projects = {
       technologies: ["React", "Styled Components", "Firebase"],
       github: "https://github.com/fabiolima-dev",
       link: "https://fabiolima.dev",
+      desktopImage: "fleet-desktop.png",
+      mobileImage: "fleet-mobile.png",
     },
     {
       name: "Project 2",
@@ -21,6 +23,8 @@ const projects = {
       technologies: ["React", "Styled Components", "Firebase"],
       github: "https://github.com/fabiolima-dev",
       link: "https://fabiolima.dev",
+      desktopImage: "fleet-desktop.png",
+      mobileImage: "fleet-mobile.png",
     },
     {
       name: "Project 3",
@@ -32,6 +36,8 @@ const projects = {
       technologies: ["React", "Styled Components", "Firebase"],
       github: "https://github.com/fabiolima-dev",
       link: "https://fabiolima.dev",
+      desktopImage: "fleet-desktop.png",
+      mobileImage: "fleet-mobile.png",
     },
   ],
   others: [
@@ -45,6 +51,8 @@ const projects = {
       technologies: ["React", "Styled Components", "Firebase"],
       github: "https://github.com/fabiolima-dev",
       link: "https://fabiolima.dev",
+      desktopImage: "fleet-desktop.png",
+      mobileImage: "fleet-mobile.png",
     },
     {
       name: "Fleet Web App",
@@ -56,6 +64,8 @@ const projects = {
       technologies: ["React", "Styled Components", "Firebase"],
       github: "https://github.com/fabiolima-dev",
       link: "https://fabiolima.dev",
+      desktopImage: "fleet-desktop.png",
+      mobileImage: "fleet-mobile.png",
     },
     {
       name: "Fleet Web App",
@@ -67,6 +77,8 @@ const projects = {
       technologies: ["React", "Styled Components", "Firebase"],
       github: "https://github.com/fabiolima-dev",
       link: "https://fabiolima.dev",
+      desktopImage: "fleet-desktop.png",
+      mobileImage: "fleet-mobile.png",
     },
   ],
 };
