@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
+import reveal from "../../data/reveal";
 import SectionTitle from "../SectionTitle";
 
-export default function Home({ section, reveal }) {
+export default function Home({ section }) {
   const shake = {
     initial: { rotate: 0 },
     animate: (i) => ({
@@ -12,6 +13,7 @@ export default function Home({ section, reveal }) {
 
   return (
     <section
+      ref={section.intersection.ref}
       id={section.id}
       className="flex h-screen flex-col items-center justify-evenly pt-16 sm:items-start"
     >
@@ -32,7 +34,7 @@ export default function Home({ section, reveal }) {
           </motion.span>{" "}
           Olá, me chamo
         </motion.h3>
-        <motion.div custom={1} variants={reveal} className="my-4 md:my-6">
+        <motion.div custom={1} variants={reveal} className="my-4">
           <SectionTitle section={section} />
         </motion.div>
         <motion.h3 custom={2} variants={reveal} className="text-secondary">

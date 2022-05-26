@@ -11,7 +11,7 @@ export default function HamburgerIcon({ sections }) {
 
   return (
     <div className="z-50 ml-6 w-7 md:hidden">
-      <div
+      <button
         onClick={handleClick}
         className="flex h-4 flex-col items-center justify-between"
       >
@@ -41,8 +41,8 @@ export default function HamburgerIcon({ sections }) {
             open ? "bg-white" : "bg-secondary"
           } h-[2px] w-6 rounded bg-secondary`}
         ></motion.div>
-      </div>
-      <MobileNav sections={sections} open={open} />
+      </button>
+      <MobileNav sections={sections} open={open} setOpen={handleClick} />
     </div>
   );
 }

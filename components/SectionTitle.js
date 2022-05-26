@@ -6,7 +6,7 @@ export default function SectionTitle({ section }) {
       width: ["0%", `100%`, `100%`, "0%", "0%"],
       marginLeft: ["0px", "0px", "auto", "auto", "0px"],
       transition: {
-        delay: 1,
+        delay: 0.5,
         duration: 1,
         times: [0, 0.3, 0.6, 1, 1],
       },
@@ -20,7 +20,7 @@ export default function SectionTitle({ section }) {
       WebkitTextFillColor: "transparent",
       textShadow: "none",
       transition: {
-        delay: 1.5,
+        delay: 1,
       },
     },
   };
@@ -30,7 +30,7 @@ export default function SectionTitle({ section }) {
       <motion.h1
         whileInView="animate"
         variants={fill}
-        className="w-max text-center [-webkit-text-fill-color:var(--color-primary)] [text-shadow:1px_1px_var(--color-secondary),1px_-1px_var(--color-secondary),-1px_1px_var(--color-secondary),-1px_-1px_var(--color-secondary)] md:text-6xl"
+        className="w-max text-center leading-normal [-webkit-text-fill-color:var(--color-primary)] [text-shadow:1px_1px_var(--color-secondary),1px_-1px_var(--color-secondary),-1px_1px_var(--color-secondary),-1px_-1px_var(--color-secondary)]"
       >
         {section.title}
       </motion.h1>
@@ -38,7 +38,7 @@ export default function SectionTitle({ section }) {
         <motion.div
           whileInView="animate"
           variants={reveal}
-          className={`${section.color} relative bottom-[48px] h-[48px] w-0 rounded-md bg-gradient-to-r md:bottom-[60px] md:h-[60px]`}
+          className={`${section.color} relative bottom-[72px] h-[65px] w-0 rounded-md bg-gradient-to-r`}
         ></motion.div>
       </div>
     </div>

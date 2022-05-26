@@ -5,7 +5,7 @@ export default function DarkModeIcon({ darkMode, setDarkMode }) {
     setDarkMode(!darkMode);
   }
   return (
-    <div onClick={handleSetDarkMode} className="relative flex items-center">
+    <button onClick={handleSetDarkMode} className="relative flex items-center">
       <motion.svg
         animate={{ rotate: darkMode ? 0 : 360 }}
         className="fill-secondary"
@@ -22,6 +22,6 @@ export default function DarkModeIcon({ darkMode, setDarkMode }) {
           className="relative left-[6px] h-[10px] w-[10px] rounded-full bg-secondary"
         ></motion.div>
       </div>
-    </div>
+    </button>
   );
 }

@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
+import reveal from "../../data/reveal";
 import SectionTitle from "../SectionTitle";
 import Technologies from "../Technologies";
 
-export default function About({ section, reveal }) {
+export default function About({ section }) {
   return (
     <section
+      ref={section.intersection.ref}
       id={section.id}
       className="flex min-h-screen flex-col justify-evenly gap-10 pt-16"
     >
@@ -32,7 +34,13 @@ export default function About({ section, reveal }) {
         novas e me manter atualizado de novas tecnologias. Deste modo, também me
         interesso em tecnologias de backend.
       </motion.p>
-      <motion.button className="h-12 w-40 rounded-sm bg-tertiary text-white">
+      <motion.button
+        initial="initial"
+        whileInView="animate"
+        custom={3}
+        variants={reveal}
+        className="h-12 w-40 rounded-sm bg-tertiary text-white"
+      >
         Baixar resumo
       </motion.button>
       <motion.div

@@ -1,6 +1,6 @@
 export default function ProjectsPreview({ project }) {
   return (
-    <div className="relative hidden xl:block">
+    <div className="relative">
       <div className="gradient-hyper absolute -left-10 h-[320px] w-[540px] -rotate-12 -skew-y-6 rounded-lg bg-gradient-to-tr"></div>
       <div className="absolute flex w-[500px] justify-center">
         <img
