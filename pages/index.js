@@ -7,10 +7,36 @@ import About from "../components/sections/About";
 import Projects from "../components/sections/Projects";
 import Contact from "../components/sections/Contact";
 import CommandLine from "../components/CommandLine";
-import sections from "../data/sections";
 
 export default function Index() {
   const [darkMode, setDarkMode] = useState(true);
+
+  const sections = {
+    home: {
+      title: "Fabio Lima.",
+      nav: "HOME",
+      color: "gradient-oceanic",
+      id: "home",
+    },
+    about: {
+      title: "Sobre mim.",
+      nav: "SOBRE",
+      color: "gradient-sunset",
+      id: "sobre",
+    },
+    projects: {
+      title: "Projetos.",
+      nav: "PROJETOS",
+      color: "gradient-hyper",
+      id: "projetos",
+    },
+    contact: {
+      title: "Contato.",
+      nav: "CONTATO",
+      color: "gradient-candy",
+      id: "contato",
+    },
+  };
 
   Object.keys(sections).forEach((key) => {
     sections[key].intersection = useInView({ threshold: 0.5 });
@@ -33,7 +59,6 @@ export default function Index() {
         setDarkMode={setDarkMode}
       />
       <main className="w-full max-w-screen-lg">
-        {console.log("rerendering")};
         <Home section={sections.home} />
         <About section={sections.about} />
         <Projects section={sections.projects} />

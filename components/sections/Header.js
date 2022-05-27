@@ -19,7 +19,7 @@ export default function Header({ darkMode, setDarkMode, sections }) {
                 sections[key].intersection.inView
                   ? "bg-tertiary text-white"
                   : "text-gray-1"
-              } flex items-center gap-4 rounded-md px-6 py-2 hover:bg-tertiary hover:text-secondary`}
+              } flex w-32 items-center gap-4 rounded-md px-2 py-2 hover:bg-tertiary hover:text-secondary`}
             >
               <div
                 className={`h-5 w-1 bg-gradient-to-tr ${sections[key].color}`}

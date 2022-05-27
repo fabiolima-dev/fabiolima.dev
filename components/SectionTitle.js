@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 export default function SectionTitle({ section }) {
   const reveal = {
     animate: {
-      width: ["0%", `100%`, `100%`, "0%", "0%"],
-      marginLeft: ["0px", "0px", "auto", "auto", "0px"],
+      width: ["0%", `100%`, `100%`, "0%"],
+      marginLeft: ["0px", "0px", "auto", "auto"],
       transition: {
         delay: 0.5,
         duration: 1,
@@ -30,7 +30,7 @@ export default function SectionTitle({ section }) {
       <motion.h1
         whileInView="animate"
         variants={fill}
-        className="w-max text-center leading-normal [-webkit-text-fill-color:var(--color-primary)] [text-shadow:1px_1px_var(--color-secondary),1px_-1px_var(--color-secondary),-1px_1px_var(--color-secondary),-1px_-1px_var(--color-secondary)]"
+        className="w-max text-center leading-normal text-primary [text-shadow:1px_1px_var(--color-secondary),1px_-1px_var(--color-secondary),-1px_1px_var(--color-secondary),-1px_-1px_var(--color-secondary)]"
       >
         {section.title}
       </motion.h1>
@@ -38,7 +38,7 @@ export default function SectionTitle({ section }) {
         <motion.div
           whileInView="animate"
           variants={reveal}
-          className={`${section.color} relative bottom-[72px] h-[65px] w-0 rounded-md bg-gradient-to-r`}
+          className={`${section.color} relative bottom-[72px] ml-0 h-[65px] w-0 rounded-md bg-gradient-to-r`}
         ></motion.div>
       </div>
     </div>
