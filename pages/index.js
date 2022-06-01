@@ -13,26 +13,26 @@ export default function Index() {
 
   const sections = {
     home: {
-      title: "Fabio Lima.",
-      nav: "HOME",
+      title: "Fabio Lima",
+      nav: "Home",
       color: "gradient-oceanic",
       id: "home",
     },
     about: {
-      title: "Sobre mim.",
-      nav: "SOBRE",
+      title: "Sobre",
+      nav: "Sobre",
       color: "gradient-sunset",
       id: "sobre",
     },
     projects: {
-      title: "Projetos.",
-      nav: "PROJETOS",
+      title: "Projetos",
+      nav: "Projetos",
       color: "gradient-hyper",
       id: "projetos",
     },
     contact: {
-      title: "Contato.",
-      nav: "CONTATO",
+      title: "Contato",
+      nav: "Contato",
       color: "gradient-candy",
       id: "contato",
     },

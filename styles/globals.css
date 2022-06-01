@@ -8,16 +8,36 @@
   .dark-theme {
     --color-primary: #000000;
     --color-secondary: #ffffff;
-    --color-tertiary: #18181a;
-    --color-quaternary: #7b7b80;
+    --color-tertiary: #27272a;
+    --color-quaternary: #18181b;
+
+    /* --gradient-hyper-one: #12c2e9;
+    --gradient-hyper-two: #c471ed;
+    --gradient-hyper-three: #f64f59;
+
+    --gradient-oceanic-one: #4b749f;
+    --gradient-oceanic-two: #385674;
+    --gradient-oceanic-three: #243748;
+
+    --gradient-candy-one: #eeb86d;
+    --gradient-candy-two: #c47f90;
+    --gradient-candy-three: #9946b2;
+
+    --gradient-mojave-one: rgb(254, 249, 195);
+    --gradient-mojave-two: rgb(253, 224, 71);
+    --gradient-mojave-three: rgb(234, 193, 0);
+
+    --gradient-sunset-one: rgb(199, 210, 254);
+    --gradient-sunset-two: rgb(254, 202, 202);
+    --gradient-sunset-three: rgb(254, 249, 195); */
 
     --gradient-hyper-one: rgb(255, 78, 165);
     --gradient-hyper-two: rgb(255, 73, 73);
     --gradient-hyper-three: rgb(255, 199, 27);
 
-    --gradient-oceanic-one: rgb(143, 255, 184);
-    --gradient-oceanic-two: rgb(128, 176, 255);
-    --gradient-oceanic-three: rgb(200, 140, 255);
+    --gradient-sunset-one: rgb(254, 249, 195);
+    --gradient-sunset-two: rgb(253, 224, 71);
+    --gradient-sunset-three: rgb(234, 193, 0);
 
     --gradient-candy-one: rgb(249, 168, 212);
     --gradient-candy-two: rgb(216, 180, 254);
@@ -27,17 +47,87 @@
     --gradient-mojave-two: rgb(253, 224, 71);
     --gradient-mojave-three: rgb(234, 193, 0);
 
+    --gradient-oceanic-one: rgb(192, 132, 252);
+    --gradient-oceanic-two: rgb(222, 170, 130);
+    --gradient-oceanic-three: rgb(250, 204, 21);
+
+    /* 
+    --gradient-mojave-one: rgb(255, 78, 165);
+    --gradient-mojave-two: rgb(255, 73, 73);
+    --gradient-mojave-three: rgb(255, 199, 27);
+
+    --gradient-oceanic-one: rgb(143, 255, 184);
+    --gradient-oceanic-two: rgb(128, 176, 255);
+    --gradient-oceanic-three: rgb(200, 140, 255);
+
+    --gradient-candy-one: rgb(248, 113, 113);
+    --gradient-candy-two: rgb(209, 213, 219);
+    --gradient-candy-three: rgb(59, 130, 246);
+
+    --gradient-hyper-one: rgb(254, 249, 195);
+    --gradient-hyper-two: rgb(253, 224, 71);
+    --gradient-hyper-three: rgb(234, 193, 0);
+
     --gradient-sunset-one: rgb(199, 210, 254);
     --gradient-sunset-two: rgb(254, 202, 202);
-    --gradient-sunset-three: rgb(254, 249, 195);
+    --gradient-sunset-three: rgb(254, 249, 195); */
+
+    /* linear-gradient(to right, rgb(248, 113, 113), rgb(209, 213, 219), rgb(59, 130, 246)) */
   }
   .light-theme {
     --color-primary: #ffffff;
     --color-secondary: #000000;
-    --color-tertiary: #35353a;
-    --color-quaternary: #adadb2;
+    --color-tertiary: #52525b;
+    --color-quaternary: #f4f4f5;
 
-    --gradient-hyper-one: rgb(229, 70, 149);
+    --gradient-hyper-one: rgb(255, 78, 165);
+    --gradient-hyper-two: rgb(255, 73, 73);
+    --gradient-hyper-three: rgb(255, 199, 27);
+
+    --gradient-sunset-one: rgb(74, 222, 128);
+    --gradient-sunset-two: rgb(96, 165, 250);
+    --gradient-sunset-three: rgb(59, 130, 246);
+
+    --gradient-candy-one: rgb(249, 168, 212);
+    --gradient-candy-two: rgb(216, 180, 254);
+    --gradient-candy-three: rgb(167, 129, 248);
+    /* 
+    --gradient-sunset-one: rgb(254, 249, 195);
+    --gradient-sunset-two: rgb(253, 224, 71);
+    --gradient-sunset-three: rgb(234, 193, 0); */
+
+    --gradient-oceanic-one: rgb(192, 132, 252);
+    --gradient-oceanic-two: rgb(222, 170, 130);
+    --gradient-oceanic-three: rgb(250, 204, 21);
+
+    /* linear-gradient(to right, rgb(74, 222, 128), rgb(96, 165, 250), rgb(59, 130, 246)) */
+
+    /* linear-gradient(to right, rgb(239, 68, 68), rgb(34, 197, 94)) */
+    /* linear-gradient(to right, rgb(29, 78, 216), rgb(30, 64, 175), rgb(17, 24, 39)) */
+
+    /* linear-gradient(to right, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0)) */
+
+    /* --gradient-hyper-one: #4b749f;
+    --gradient-hyper-two: #385674;
+    --gradient-hyper-three: #243748;
+
+    --gradient-oceanic-one: rgb(255, 78, 165);
+    --gradient-oceanic-two: rgb(255, 73, 73);
+    --gradient-oceanic-three: rgb(255, 199, 27);
+
+    --gradient-candy-one: #432371;
+    --gradient-candy-two: #9f6976;
+    --gradient-candy-three: #faae7b;
+
+    --gradient-mojave-one: rgb(254, 249, 195);
+    --gradient-mojave-two: rgb(253, 224, 71);
+    --gradient-mojave-three: rgb(234, 193, 0);
+
+    --gradient-sunset-one: #ef566a;
+    --gradient-sunset-two: #627af7;
+    --gradient-sunset-three: #627af7; */
+
+    /* --gradient-hyper-one: rgb(229, 70, 149);
     --gradient-hyper-two: rgb(229, 65, 65);
     --gradient-hyper-three: rgb(255, 236, 26);
 
@@ -55,7 +145,7 @@
 
     --gradient-sunset-one: rgb(122, 139, 204);
     --gradient-sunset-two: rgb(229, 161, 161);
-    --gradient-sunset-three: rgb(229, 225, 176);
+    --gradient-sunset-three: rgb(229, 225, 176); */
   }
   h1 {
     @apply text-5xl font-extrabold;

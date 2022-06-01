@@ -27,9 +27,9 @@ export default function FeaturedProject({ project }) {
       </li>
       <p className="text-gray-1">{project.description}</p>
       <li className="flex flex-wrap gap-4 text-white">
-        {project.technologies.map((technologie) => {
+        {project.technologies.map((technologie, index) => {
           return (
-            <ul className="rounded-sm bg-tertiary py-[4px] px-2">
+            <ul key={index} className="rounded-sm bg-tertiary py-[4px] px-2">
               {technologie}
             </ul>
           );

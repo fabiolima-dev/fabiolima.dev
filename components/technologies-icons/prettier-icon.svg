@@ -17,8 +17,8 @@
         }
 
         .st4 {
-            opacity: .5;
-            fill: #4d616e;
+            opacity: 1;
+            fill: var(--color-quaternary);
             enable-background: new
         }
     </style>

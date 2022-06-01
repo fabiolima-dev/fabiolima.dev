@@ -30,7 +30,7 @@ export default function Projects({ section }) {
             whileInView="animate"
             custom={3}
             variants={reveal}
-            className="flex h-10 w-full justify-between bg-tertiary text-gray-1"
+            className="flex h-10 w-full justify-between"
           >
             {projects.feature.map((project, index) => {
               return (
@@ -41,7 +41,7 @@ export default function Projects({ section }) {
                   className={`${
                     projectOrder == index
                       ? "bg-primary text-secondary"
-                      : "bg-tertiary"
+                      : "bg-quaternary"
                   } relative flex w-full items-center justify-center border-x-2 border-primary p-2 text-center hover:bg-primary hover:text-secondary`}
                 >
                   {project.name}
@@ -80,9 +80,9 @@ export default function Projects({ section }) {
         className="flex flex-col gap-4"
       >
         <h2>Outros projetos</h2>
-        <div className="flex flex-col gap-4 md:flex-row">
-          {projects.others.map((project) => {
-            return <OtherProject project={project} />;
+        <div className="mb-10 flex flex-col gap-4 md:flex-row">
+          {projects.others.map((project, index) => {
+            return <OtherProject key={index} project={project} />;
           })}
         </div>
       </motion.div>

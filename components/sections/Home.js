@@ -34,7 +34,7 @@ export default function Home({ section }) {
           </motion.span>{" "}
           Olá, me chamo
         </motion.h3>
-        <motion.div custom={1} variants={reveal} className="my-4">
+        <motion.div custom={1} variants={reveal} className="my-2">
           <SectionTitle section={section} />
         </motion.div>
         <motion.h3 custom={2} variants={reveal} className="text-secondary">
@@ -46,9 +46,9 @@ export default function Home({ section }) {
         animate="animate"
         custom={4}
         variants={reveal}
-        className="mx-8 w-fit rounded-md bg-tertiary px-6 py-2 text-center font-mono font-bold text-white hover:drop-shadow-md sm:mx-0"
+        className="mx-8 w-fit rounded-md bg-tertiary px-6 py-2 text-center text-white drop-shadow-md sm:mx-0"
       >
-        Aperte ctrl + k para linha de comando
+        Aperte <span className="font-bold">ctrl + k</span> para linha de comando
       </motion.h3>
     </section>
   );

@@ -18,10 +18,7 @@ export default function Contact({ section }) {
           variants={reveal}
           className="text-center text-gray-1"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          ac magna facilisis, accumsan orci a, vehicula magna. Aliquam laoreet
-          orci sed ligula gravida fringilla. Ut non sagittis ante. Ut sed cursus
-          tortor. Quisque iaculis sed mauris nec ultrices.
+          Estou em busca de uma oportunidade
         </motion.p>
         <motion.div
           initial="initial"

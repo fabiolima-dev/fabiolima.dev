@@ -9,7 +9,7 @@ export default function Header({ darkMode, setDarkMode, sections }) {
         <FabioLogo />
       </div>
       {/* Larger Screens navbar */}
-      <nav className="hidden md:flex">
+      <nav className="hidden gap-2 md:flex">
         {Object.keys(sections).map((key) => {
           return (
             <a
@@ -17,12 +17,12 @@ export default function Header({ darkMode, setDarkMode, sections }) {
               href={`./#${sections[key].id}`}
               className={`${
                 sections[key].intersection.inView
-                  ? "bg-tertiary text-white"
+                  ? "bg-quaternary text-secondary"
                   : "text-gray-1"
-              } flex w-32 items-center gap-4 rounded-md px-2 py-2 hover:bg-tertiary hover:text-secondary`}
+              } relative flex w-32 items-center justify-center gap-4 rounded-md px-2 py-2 hover:bg-quaternary hover:text-secondary`}
             >
               <div
-                className={`h-5 w-1 bg-gradient-to-tr ${sections[key].color}`}
+                className={`absolute left-2 h-5 w-1 bg-gradient-to-tr ${sections[key].color}`}
               ></div>
               {sections[key].nav}
             </a>
