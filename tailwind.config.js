@@ -20,6 +20,8 @@ module.exports = {
         mono: ["Fira code"],
       },
       colors: {
+        black: "#18181b",
+        // white: {},
         gray: {
           1: "#95959a",
           2: "#35353a",
@@ -29,7 +31,7 @@ module.exports = {
         secondary: "var(--color-secondary)",
         tertiary: "var(--color-tertiary)",
         quaternary: "var(--color-quaternary)",
-        slate: "var(--color-slate)",
+        translucid: "var(--color-translucid)",
       },
     },
   },

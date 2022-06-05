@@ -20,7 +20,7 @@ export default function MobileNav({ sections, open, setOpen }) {
   }, [sections]);
 
   return (
-    <motion.div className="fixed top-0 right-0 -z-10 flex w-screen opacity-100 md:hidden">
+    <motion.div className="fixed top-0 right-0 -z-10 flex w-screen md:hidden">
       <div
         onClick={setOpen}
         className={`${open ? "" : "hidden"} h-screen w-screen backdrop-blur-sm`}

@@ -6,10 +6,11 @@
 
 @layer base {
   .dark-theme {
-    --color-primary: #000000;
+    --color-primary: #18181b;
     --color-secondary: #ffffff;
     --color-tertiary: #27272a;
     --color-quaternary: #18181b;
+    --color-translucid: rgba(39, 39, 42, 0.7);
 
     /* --gradient-hyper-one: #12c2e9;
     --gradient-hyper-two: #c471ed;
@@ -75,10 +76,12 @@
     /* linear-gradient(to right, rgb(248, 113, 113), rgb(209, 213, 219), rgb(59, 130, 246)) */
   }
   .light-theme {
-    --color-primary: #ffffff;
+    --color-primary: ##f9fafb;
     --color-secondary: #000000;
     --color-tertiary: #52525b;
     --color-quaternary: #f4f4f5;
+    --color-translucid: rgb(0, 0, 0, 0.05);
+    --color-translucid: rgba(39, 39, 42, 0.7);
 
     --gradient-hyper-one: rgb(255, 78, 165);
     --gradient-hyper-two: rgb(255, 73, 73);

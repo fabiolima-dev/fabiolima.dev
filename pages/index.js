@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import Head from "next/head";
 import Header from "../components/sections/Header";
@@ -10,6 +10,22 @@ import CommandLine from "../components/CommandLine";
 
 export default function Index() {
   const [darkMode, setDarkMode] = useState(true);
+  const [showCommandLine, setShowCommandLine] = useState(false);
+
+  useEffect(() => {
+    const handleUserKeyPress = (event) => {
+      if (event.ctrlKey && event.key === "k") {
+        event.preventDefault();
+        setShowCommandLine(!showCommandLine);
+      }
+    };
+
+    window.addEventListener("keydown", handleUserKeyPress);
+
+    return () => {
+      window.removeEventListener("keydown", handleUserKeyPress);
+    };
+  }, [showCommandLine]);
 
   const sections = {
     home: {
@@ -42,11 +58,90 @@ export default function Index() {
     sections[key].intersection = useInView({ threshold: 0.5 });
   });
 
+  const commands = [
+    {
+      name: "Copiar URL",
+      method: function () {
+        navigator.clipboard.writeText("https://fabiolima.dev/");
+      },
+      icon: "ri-link",
+    },
+    {
+      name: "Ver código fonte",
+      method: function () {
+        window.open("https://github.com/fabiolima-dev/fabiolima.dev", "_blank");
+      },
+      icon: "ri-code-line",
+    },
+    {
+      name: "Mudar para Tema claro",
+      method: function () {
+        setDarkMode(!darkMode);
+      },
+      icon: "ri-contrast-2-line",
+    },
+    {
+      name: "Baixar Resumo",
+      method: function () {
+        console.log("Baixando Resumo");
+      },
+      icon: "ri-pages-line",
+    },
+    {
+      name: "Home",
+      method: function () {
+        window.location.hash = "home";
+      },
+      icon: "ri-home-line",
+    },
+    {
+      name: "Sobre",
+      method: function () {
+        window.location.hash = "sobre";
+      },
+      icon: "ri-user-line",
+    },
+    {
+      name: "Projetos",
+      method: function () {
+        window.location.hash = "projetos";
+      },
+      icon: "ri-lightbulb-line",
+    },
+    {
+      name: "Contato",
+      method: function () {
+        window.location.hash = "contato";
+      },
+      icon: "ri-contacts-book-line",
+    },
+    {
+      name: "Github",
+      method: function () {
+        window.open("https://github.com/fabiolima-dev", "_blank");
+      },
+      icon: "ri-github-line",
+    },
+    {
+      name: "Linkedin",
+      method: function () {
+        window.open("https://www.linkedin.com/in/fabiolimadev/", "_blank");
+      },
+      icon: "ri-linkedin-line",
+    },
+    {
+      name: "Mandar Email",
+      method: function () {
+        console.log("mandando email");
+      },
+      icon: "ri-mail-line",
+    },
+  ];
+
   return (
     <div
-      className={`${
-        darkMode ? "dark-theme" : "light-theme"
-      } box-border flex min-w-[300px] flex-col items-center bg-primary px-5 text-secondary xs:px-10 md:px-20`}
+      className={`${darkMode ? "dark-theme" : "light-theme"}
+      box-border flex min-w-[300px] flex-col items-center bg-primary px-5 text-secondary xs:px-10 md:px-20`}
     >
       <Head>
         <title>Fabio Lima</title>
@@ -63,7 +158,12 @@ export default function Index() {
         <About section={sections.about} />
         <Projects section={sections.projects} />
         <Contact section={sections.contact} />
-        <CommandLine />
+        {showCommandLine && (
+          <CommandLine
+            commands={commands}
+            setShowCommandLine={setShowCommandLine}
+          />
+        )}
       </main>
     </div>
   );
