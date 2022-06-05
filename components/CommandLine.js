@@ -49,14 +49,14 @@ export default function CommandLine(props) {
   }, [currentCommand, commands]);
 
   return (
-    <div className="fixed top-40 left-0 flex w-screen items-center justify-center text-secondary">
-      <div className="w-full max-w-screen-md overflow-hidden rounded-xl">
+    <div className="md:top- fixed top-16 left-0 flex w-screen items-center justify-center text-secondary md:top-28">
+      <div className="w-full min-w-[300px] max-w-screen-md overflow-hidden rounded-xl">
         {/* Div for fix rounded backdrop-filter */}
         <div className="w-full max-w-screen-md backdrop-blur">
           {/* Div for backdrop-filter */}
-          <div className="flex flex-col bg-translucid px-10 py-5">
+          <div className="flex flex-col bg-translucid py-5">
             {/* Div for bg color */}
-            <div className="flex gap-4">
+            <div className="flex gap-4 px-10">
               <i className="ri-search-line"></i>
               <input
                 ref={searchBar}
@@ -64,21 +64,24 @@ export default function CommandLine(props) {
                 className="mb-4 w-full bg-transparent focus:outline-none"
               ></input>
             </div>
-            {commands.map((command, index) => {
-              return (
-                <div
-                  key={index}
-                  id={index}
-                  onMouseEnter={handleMouseEnter}
-                  className={`flex gap-4 py-4 text-white ${
-                    currentCommand === index ? "-mx-10 bg-black px-10" : ""
-                  }`}
-                >
-                  <i className={command.icon}></i>
-                  <h3>{command.name}</h3>
-                </div>
-              );
-            })}
+            <div className="max-h-[65vh] overflow-y-auto">
+              {commands.map((command, index) => {
+                return (
+                  <div
+                    key={index}
+                    id={index}
+                    onMouseEnter={handleMouseEnter}
+                    onClick={command.method}
+                    className={`flex cursor-pointer gap-4 px-10 py-4 text-white ${
+                      currentCommand === index ? "bg-black" : ""
+                    }`}
+                  >
+                    <i className={command.icon}></i>
+                    <h3>{command.name}</h3>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

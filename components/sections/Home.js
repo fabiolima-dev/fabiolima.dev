@@ -15,14 +15,14 @@ export default function Home({ section }) {
     <section
       ref={section.intersection.ref}
       id={section.id}
-      className="flex h-screen flex-col items-center justify-evenly pt-16 sm:items-start"
+      className="flex h-screen flex-col items-center justify-evenly sm:items-start"
     >
       <motion.div
         initial="initial"
         whileInView="animate"
         custom={0}
         variants={reveal}
-        className="flex flex-col"
+        className="mb-36 flex flex-col"
       >
         <motion.h3 custom={0} variants={reveal} className="text-secondary">
           <motion.span
@@ -38,7 +38,7 @@ export default function Home({ section }) {
           <SectionTitle section={section} />
         </motion.div>
         <motion.h3 custom={2} variants={reveal} className="text-secondary">
-          Desenvolvedor Front End e UI Designer.
+          Desenvolvedor Front End
         </motion.h3>
       </motion.div>
       <motion.h3
@@ -46,7 +46,7 @@ export default function Home({ section }) {
         animate="animate"
         custom={4}
         variants={reveal}
-        className="mx-8 w-fit rounded-md bg-tertiary px-6 py-2 text-center text-white drop-shadow-md sm:mx-0"
+        className="absolute bottom-16 left-0 right-0 mx-auto w-fit rounded-md bg-tertiary px-6 py-2 text-center text-white"
       >
         Aperte <span className="font-bold">ctrl + k</span> para linha de comando
       </motion.h3>

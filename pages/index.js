@@ -63,6 +63,7 @@ export default function Index() {
       name: "Copiar URL",
       method: function () {
         navigator.clipboard.writeText("https://fabiolima.dev/");
+        setShowCommandLine(false);
       },
       icon: "ri-link",
     },
@@ -70,6 +71,7 @@ export default function Index() {
       name: "Ver código fonte",
       method: function () {
         window.open("https://github.com/fabiolima-dev/fabiolima.dev", "_blank");
+        setShowCommandLine(false);
       },
       icon: "ri-code-line",
     },
@@ -77,6 +79,7 @@ export default function Index() {
       name: "Mudar para Tema claro",
       method: function () {
         setDarkMode(!darkMode);
+        setShowCommandLine(false);
       },
       icon: "ri-contrast-2-line",
     },
@@ -84,6 +87,7 @@ export default function Index() {
       name: "Baixar Resumo",
       method: function () {
         console.log("Baixando Resumo");
+        setShowCommandLine(false);
       },
       icon: "ri-pages-line",
     },
@@ -91,6 +95,7 @@ export default function Index() {
       name: "Home",
       method: function () {
         window.location.hash = "home";
+        setShowCommandLine(false);
       },
       icon: "ri-home-line",
     },
@@ -98,6 +103,7 @@ export default function Index() {
       name: "Sobre",
       method: function () {
         window.location.hash = "sobre";
+        setShowCommandLine(false);
       },
       icon: "ri-user-line",
     },
@@ -105,6 +111,7 @@ export default function Index() {
       name: "Projetos",
       method: function () {
         window.location.hash = "projetos";
+        setShowCommandLine(false);
       },
       icon: "ri-lightbulb-line",
     },
@@ -112,6 +119,7 @@ export default function Index() {
       name: "Contato",
       method: function () {
         window.location.hash = "contato";
+        setShowCommandLine(false);
       },
       icon: "ri-contacts-book-line",
     },
@@ -119,6 +127,7 @@ export default function Index() {
       name: "Github",
       method: function () {
         window.open("https://github.com/fabiolima-dev", "_blank");
+        setShowCommandLine(false);
       },
       icon: "ri-github-line",
     },
@@ -126,6 +135,7 @@ export default function Index() {
       name: "Linkedin",
       method: function () {
         window.open("https://www.linkedin.com/in/fabiolimadev/", "_blank");
+        setShowCommandLine(false);
       },
       icon: "ri-linkedin-line",
     },
@@ -133,6 +143,7 @@ export default function Index() {
       name: "Mandar Email",
       method: function () {
         console.log("mandando email");
+        setShowCommandLine(false);
       },
       icon: "ri-mail-line",
     },

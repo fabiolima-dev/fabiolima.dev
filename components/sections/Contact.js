@@ -9,7 +9,7 @@ export default function Contact({ section }) {
       id={section.id}
       className="flex min-h-screen flex-col justify-evenly pt-16"
     >
-      <div className="m-auto flex max-w-md flex-col items-center gap-20">
+      <div className="m-auto flex max-w-lg flex-col items-center gap-14">
         <SectionTitle section={section} />
         <motion.p
           initial="initial"
@@ -18,7 +18,11 @@ export default function Contact({ section }) {
           variants={reveal}
           className="text-center text-gray-1"
         >
-          Estou em busca de uma oportunidade
+          Estou em busca de uma oportunidade para aprofundar meus conhecimentos
+          de forma prática. Por ser graduado em Design Gráfico e ter
+          familiaridade com interfaces, atualmente estou focando meu aprendizado
+          em tecnologias front-end, mas também me interesso e pretendo continuar
+          meu estudos através de tecnologias back-end.
         </motion.p>
         <motion.div
           initial="initial"

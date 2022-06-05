@@ -19,20 +19,35 @@ export default function About({ section }) {
         className="leading-loose text-gray-1"
       >
         Olá, meu nome é{" "}
-        <span className="text-secondary">Fabio Henrique de Lima.</span> Sou de
-        Louveira-SP. <br></br>
-        <br></br>
-        Meu primeiro contato com a programação foi em 2020, através de um curso
-        online gratuito de Harvard, CS50x. Nos desafios iniciais e primeiras
-        resoluções através das linhas de código, percebi que gostaria de seguir
-        na área da programação. <br></br>
+        <span className="text-secondary">Fabio Henrique de Lima</span>, sou
+        Desenvolvedor Front End, atualmente morando em Louveira - SP.<br></br>
+        <br></br> Meu interesse por desenvolvimento web se iniciou em 2017,
+        durante minha graduaçāo em Design Gráfico, onde desenvolvemos um projeto
+        em HTML e CSS. Após concluir a faculdade e estagiar durante um ano na
+        área, percebi que não era realmente o que eu queria e buscando por outra
+        área, dessa vez, que envolvesse mais{" "}
+        <span className="text-secondary">raciocínio lógico</span>, encontrei o{" "}
+        <a
+          href="https://cs50.harvard.edu/x/2022/"
+          target="_blank"
+          className="text-base text-secondary underline"
+        >
+          CS50x
+        </a>
+        , um curso da universidade de Harvard, introdutório a ciência da
+        computação que é disponibilizado gratuitamente. A partir do momento que
+        fiz minhas primeiras{" "}
+        <span className="text-secondary">
+          resoluções de problemas através de linhas de código
+        </span>
+        , tive a certeza que tinha me encontrado. <br></br>
         <br></br>Desde então, venho estudando e aprimorando minhas habilidades
-        por meio de livros, artigos e conteúdos na internet. Por ser graduado em
-        Design Gráfico, ter familiaridade e facilidade com a criação de
-        interfaces, voltei meu aprendizado e capacitação para as tecnologias de
-        front end. Contudo, tenho muita curiosidade, vontade de aprender coisas
-        novas e me manter atualizado de novas tecnologias. Deste modo, também me
-        interesso em tecnologias de backend.
+        por meio de{" "}
+        <span className="text-secondary">
+          livros, artigos e conteúdos na internet
+        </span>
+        , além de buscar automatizar e facilitar através da programaçāo, toda
+        tarefa possível no meu trabalho atual.
       </motion.p>
       <motion.button
         initial="initial"
