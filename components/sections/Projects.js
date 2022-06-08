@@ -80,7 +80,7 @@ export default function Projects({ section }) {
         className="flex flex-col gap-4"
       >
         <h2>Outros projetos</h2>
-        <div className="mb-10 flex flex-col gap-4 md:flex-row">
+        <div className="mb-10 flex flex-col gap-8 md:flex-row">
           {projects.others.map((project, index) => {
             return <OtherProject key={index} project={project} />;
           })}

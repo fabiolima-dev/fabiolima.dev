@@ -35,7 +35,7 @@ export default function Index() {
       id: "home",
     },
     about: {
-      title: "Sobre",
+      title: "Sobre mim",
       nav: "Sobre",
       color: "gradient-sunset",
       id: "sobre",

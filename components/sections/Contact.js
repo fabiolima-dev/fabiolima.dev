@@ -18,11 +18,11 @@ export default function Contact({ section }) {
           variants={reveal}
           className="text-center text-gray-1"
         >
-          Estou em busca de uma oportunidade para aprofundar meus conhecimentos
-          de forma prática. Por ser graduado em Design Gráfico e ter
-          familiaridade com interfaces, atualmente estou focando meu aprendizado
-          em tecnologias front-end, mas também me interesso e pretendo continuar
-          meu estudos através de tecnologias back-end.
+          Procuro uma oportunidade para aprofundar meus conhecimentos de forma
+          prática. Por ser graduado em Design Gráfico e ter familiaridade com
+          interfaces, atualmente estou focando em tecnologias front-end, mas
+          também me interesso e pretendo continuar os estudos na área de
+          back-end.
         </motion.p>
         <motion.div
           initial="initial"

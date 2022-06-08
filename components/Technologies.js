@@ -38,7 +38,7 @@ export default function Technologies() {
 
   return (
     <div className="text-secondary">
-      <h3 className="mb-10">Tecnologias que tenho usado recentemente</h3>
+      <h3 className="mb-10">Tecnologias que tenho usado recentemente:</h3>
       <div className="flex h-36 w-full overflow-hidden">
         {positions.map((key) => {
           return (

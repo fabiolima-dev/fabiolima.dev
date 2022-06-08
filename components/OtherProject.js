@@ -5,7 +5,10 @@ export default function OtherProject({ project }) {
       <li className="flex flex-wrap gap-4 text-white">
         {project.technologies.map((technologie, index) => {
           return (
-            <ul key={index} className="rounded-sm bg-tertiary py-[4px] px-2">
+            <ul
+              key={index}
+              className="w-max rounded-sm bg-tertiary py-[4px] px-2"
+            >
               {technologie}
             </ul>
           );

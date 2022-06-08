@@ -24,9 +24,8 @@ export default function About({ section }) {
         <br></br> Meu interesse por desenvolvimento web se iniciou em 2017,
         durante minha graduaçāo em Design Gráfico, onde desenvolvemos um projeto
         em HTML e CSS. Após concluir a faculdade e estagiar durante um ano na
-        área, percebi que não era realmente o que eu queria e buscando por outra
-        área, dessa vez, que envolvesse mais{" "}
-        <span className="text-secondary">raciocínio lógico</span>, encontrei o{" "}
+        área, percebi que não era realmente o que eu queria. Buscando por outra
+        área, dessa vez que envolvesse mais raciocínio lógico, encontrei o{" "}
         <a
           href="https://cs50.harvard.edu/x/2022/"
           target="_blank"
@@ -34,14 +33,18 @@ export default function About({ section }) {
         >
           CS50x
         </a>
-        , um curso da universidade de Harvard, introdutório a ciência da
-        computação que é disponibilizado gratuitamente. A partir do momento que
-        fiz minhas primeiras{" "}
+        , um curso da Universidade Harvard, introdutório à ciência da computação
+        que é disponibilizado gratuitamente. A partir do momento que fiz minhas
+        primeiras{" "}
         <span className="text-secondary">
           resoluções de problemas através de linhas de código
         </span>
         , tive a certeza que tinha me encontrado. <br></br>
-        <br></br>Desde então, venho estudando e aprimorando minhas habilidades
+        <br></br>
+        Desde então, venho{" "}
+        <span className="text-secondary">
+          estudando e aprimorando minhas habilidades{" "}
+        </span>
         por meio de{" "}
         <span className="text-secondary">
           livros, artigos e conteúdos na internet
