@@ -1,19 +1,19 @@
-import { motion, useTransform, useViewportScroll } from "framer-motion";
-import CliIcon from "./technologies-icons/cli-icon.svg";
-import NpmIcon from "./technologies-icons/npm-icon.svg";
-import GitIcon from "./technologies-icons/git-icon.svg";
-import GithubIcon from "./technologies-icons/github-icon.svg";
-import HtmlIcon from "./technologies-icons/html-icon.svg";
-import CssIcon from "./technologies-icons/css-icon.svg";
-import StyledComponentsIcon from "./technologies-icons/styled-components-icon.svg";
-import TailwindIcon from "./technologies-icons/tailwind-icon.svg";
-import JavascriptIcon from "./technologies-icons/javascript-icon.svg";
-import ReactIcon from "./technologies-icons/react-icon.svg";
-import NextIcon from "./technologies-icons/next-icon.svg";
-import FirebaseIcon from "./technologies-icons/firebase-icon.svg";
-import PrettierIcon from "./technologies-icons/prettier-icon.svg";
-import EslintIcon from "./technologies-icons/eslint-icon.svg";
-import FigmaIcon from "./technologies-icons/figma-icon.svg";
+import { motion } from "framer-motion";
+import CliIcon from "../public/technologies-icons/cli-icon.svg";
+import NpmIcon from "../public/technologies-icons/npm-icon.svg";
+import GitIcon from "../public/technologies-icons/git-icon.svg";
+import GithubIcon from "../public/technologies-icons/github-icon.svg";
+import HtmlIcon from "../public/technologies-icons/html-icon.svg";
+import CssIcon from "../public/technologies-icons/css-icon.svg";
+import StyledComponentsIcon from "../public/technologies-icons/styled-components-icon.svg";
+import TailwindIcon from "../public/technologies-icons/tailwind-icon.svg";
+import JavascriptIcon from "../public/technologies-icons/javascript-icon.svg";
+import ReactIcon from "../public/technologies-icons/react-icon.svg";
+import NextIcon from "../public/technologies-icons/next-icon.svg";
+import FirebaseIcon from "../public/technologies-icons/firebase-icon.svg";
+import PrettierIcon from "../public/technologies-icons/prettier-icon.svg";
+import EslintIcon from "../public/technologies-icons/eslint-icon.svg";
+import FigmaIcon from "../public/technologies-icons/figma-icon.svg";
 
 export default function Technologies() {
   const technologies = {
