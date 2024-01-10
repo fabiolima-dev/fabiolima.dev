@@ -57,11 +57,11 @@ export default function CommandLine(props) {
           <div className="flex flex-col bg-translucid py-5">
             {/* Div for bg color */}
             <div className="flex gap-4 px-10">
-              <i className="ri-search-line"></i>
+              <i className="ri-search-line text-white"></i>
               <input
                 ref={searchBar}
                 placeholder="Procurar comando"
-                className="mb-4 w-full bg-transparent focus:outline-none"
+                className="mb-4 w-full bg-transparent text-white focus:outline-none"
               ></input>
             </div>
             <div className="max-h-[65vh] overflow-y-auto">

@@ -42,7 +42,7 @@ export default function Projects({ section }) {
                     projectOrder == index
                       ? "bg-primary text-secondary"
                       : "bg-quaternary"
-                  } relative flex w-full items-center justify-center border-x-2 border-primary p-2 text-center hover:bg-primary hover:text-secondary`}
+                  } relative flex w-full cursor-pointer items-center justify-center border-x-2 border-primary p-2 text-center hover:bg-primary hover:text-secondary`}
                 >
                   {project.name}
                 </h3>

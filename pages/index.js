@@ -165,7 +165,11 @@ export default function Index() {
         setDarkMode={setDarkMode}
       />
       <main className="w-full max-w-screen-lg">
-        <Home section={sections.home} />
+        <Home
+          section={sections.home}
+          setShowCommandLine={setShowCommandLine}
+          showCommandLine={showCommandLine}
+        />
         <About section={sections.about} />
         <Projects section={sections.projects} />
         <Contact section={sections.contact} />
