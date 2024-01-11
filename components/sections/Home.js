@@ -12,29 +12,39 @@ export default function Home({ section, setShowCommandLine, showCommandLine }) {
       id={section.id}
       className="flex h-screen flex-col items-center justify-evenly sm:items-start"
     >
-      <motion.div
-        initial="initial"
-        whileInView="animate"
-        custom={0}
-        variants={reveal}
-        className="mb-36 flex flex-col"
-      >
-        <motion.div custom={1} variants={reveal} className="my-2">
+      <div className="mb-36 flex flex-col">
+        <div className="my-2">
           <SectionTitle section={section} />
-        </motion.div>
-        <motion.h3 custom={2} variants={reveal} className="text-secondary">
+        </div>
+        <motion.h3
+          initial="initial"
+          whileInView="animate"
+          custom={3}
+          variants={reveal}
+          className="text-bold mb-2 text-secondary"
+        >
           Desenvolvedor de Software
         </motion.h3>
-      </motion.div>
+        <motion.h3
+          initial="initial"
+          whileInView="animate"
+          custom={3}
+          variants={reveal}
+          className="text-gray-1"
+        >
+          Crio aplicações que transformam a vida das pessoas
+        </motion.h3>
+      </div>
       <motion.h3
         onClick={handleClick}
         initial="initial"
-        animate="animate"
-        custom={4}
+        whileInView="animate"
+        custom={3}
         variants={reveal}
         className="absolute bottom-16 left-0 right-0 mx-auto w-fit cursor-pointer rounded-md bg-tertiary px-6 py-2 text-center text-white"
       >
-        Aperte <span className="font-bold">ctrl + k</span> para linha de comando
+        Aperte <span className="hidden font-bold md:inline">ctrl + k</span> para
+        linha de comando
       </motion.h3>
     </section>
   );

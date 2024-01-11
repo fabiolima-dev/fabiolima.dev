@@ -76,7 +76,7 @@ export default function Index() {
       icon: "ri-code-line",
     },
     {
-      name: "Mudar para Tema claro",
+      name: `Mudar para tema ${darkMode ? "claro" : "escuro"}`,
       method: function () {
         setDarkMode(!darkMode);
         setShowCommandLine(false);
@@ -84,7 +84,7 @@ export default function Index() {
       icon: "ri-contrast-2-line",
     },
     {
-      name: "Baixar Resumo",
+      name: "Baixar resumo",
       method: function () {
         console.log("Baixando Resumo");
         setShowCommandLine(false);
@@ -140,7 +140,7 @@ export default function Index() {
       icon: "ri-linkedin-line",
     },
     {
-      name: "Mandar Email",
+      name: "Mandar e-mail",
       method: function () {
         console.log("mandando email");
         setShowCommandLine(false);

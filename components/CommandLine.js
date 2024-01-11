@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 
 export default function CommandLine(props) {
   const searchBar = useRef();
+  const clDiv = useRef();
   const [currentCommand, setCurrentCommand] = useState(0);
   const [commands, setCommands] = useState(props.commands);
 
@@ -19,6 +20,7 @@ export default function CommandLine(props) {
 
   useEffect(() => {
     const searchBarInstance = searchBar.current;
+    const clDivInstace = clDiv.current;
     searchBarInstance.focus();
     searchBarInstance.addEventListener("input", handleInput);
     function handleKeydown(e) {
@@ -34,23 +36,35 @@ export default function CommandLine(props) {
         } else {
           setCurrentCommand((prevCurrentCommand) => prevCurrentCommand - 1);
         }
-      } else if (e.key === "Enter") {
+      } else if (e.key === "Enter" || e.key === "ArrowRight") {
         commands[currentCommand].method();
+        props.setShowCommandLine(false);
+      } else if (e.key === "Escape") {
+        props.setShowCommandLine(false);
+      }
+    }
+    function handleClick(e) {
+      if (clDivInstace && !clDivInstace.contains(e.target)) {
         props.setShowCommandLine(false);
       }
     }
 
     document.addEventListener("keydown", handleKeydown);
+    document.addEventListener("click", handleClick);
 
     return () => {
       document.removeEventListener("keydown", handleKeydown);
+      document.removeEventListener("click", handleClick);
       searchBarInstance.removeEventListener("input", handleInput);
     };
   }, [currentCommand, commands]);
 
   return (
     <div className="md:top- fixed top-16 left-0 flex w-screen items-center justify-center text-secondary md:top-28">
-      <div className="w-full min-w-[300px] max-w-screen-md overflow-hidden rounded-xl">
+      <div
+        ref={clDiv}
+        className="w-full min-w-[300px] max-w-screen-md overflow-hidden rounded-xl"
+      >
         {/* Div for fix rounded backdrop-filter */}
         <div className="w-full max-w-screen-md backdrop-blur">
           {/* Div for backdrop-filter */}
