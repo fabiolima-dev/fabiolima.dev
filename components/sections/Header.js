@@ -32,7 +32,7 @@ export default function Header({ darkMode, setDarkMode, sections }) {
       {/* Mobile Hamburger navbar */}
       <div className="flex items-center">
         <DarkModeIcon darkMode={darkMode} setDarkMode={setDarkMode} />
-        <HamburgerIcon sections={sections} />
+        <HamburgerIcon darkMode={darkMode} sections={sections} />
       </div>
     </header>
   );

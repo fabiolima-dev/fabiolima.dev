@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import MobileNav from "./MobileNav";
 
-export default function HamburgerIcon({ sections }) {
+export default function HamburgerIcon({ darkMode, sections }) {
   const [open, setOpen] = useState(false);
 
   function handleClick() {
@@ -18,27 +18,27 @@ export default function HamburgerIcon({ sections }) {
         <motion.div
           animate={{ width: open ? 0 : 24, translateY: open ? 5 : 0 }}
           className={`${
-            open ? "bg-white" : "bg-secondary"
+            darkMode ? "bg-white" : "bg-secondary"
           } h-[2px] w-6 rounded bg-secondary`}
         ></motion.div>
         <div className="h-[2px] w-6">
           <motion.div
             animate={{ rotate: open ? 45 : 0 }}
             className={`${
-              open ? "bg-white" : "bg-secondary"
+              darkMode ? "bg-white" : "bg-secondary"
             } absolute h-[2px] w-6 rounded`}
           ></motion.div>
           <motion.div
             animate={{ rotate: open ? -45 : 0 }}
             className={`${
-              open ? "bg-white" : "bg-secondary"
+              darkMode ? "bg-white" : "bg-secondary"
             } absolute h-[2px] w-6 rounded `}
           ></motion.div>
         </div>
         <motion.div
           animate={{ width: open ? 0 : 24, translateY: open ? -5 : 0 }}
           className={`${
-            open ? "bg-white" : "bg-secondary"
+            darkMode ? "bg-white" : "bg-secondary"
           } h-[2px] w-6 rounded bg-secondary`}
         ></motion.div>
       </button>

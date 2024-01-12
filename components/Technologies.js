@@ -43,8 +43,14 @@ export default function Technologies() {
         {positions.map((key) => {
           return (
             <motion.div
-              animate={{ translateX: "-100%" }}
-              transition={{ repeat: Infinity, duration: 35, ease: "linear" }}
+              initial={{ translateX: "-100%" }}
+              whileInView={{ translateX: "0%" }}
+              transition={{
+                repeat: Infinity,
+                duration: 35,
+                ease: "linear",
+                delay: 0.8,
+              }}
               className={`mt-4 inline`}
               key={key}
             >

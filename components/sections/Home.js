@@ -5,6 +5,7 @@ import SectionTitle from "../SectionTitle";
 export default function Home({ section, setShowCommandLine, showCommandLine }) {
   function handleClick(e) {
     setShowCommandLine(!showCommandLine);
+    e.stopPropagation();
   }
   return (
     <section

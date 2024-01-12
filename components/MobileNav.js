@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 export default function MobileNav({ sections, open, setOpen }) {
@@ -21,12 +21,19 @@ export default function MobileNav({ sections, open, setOpen }) {
 
   return (
     <motion.div className="fixed top-0 right-0 -z-10 flex w-screen md:hidden">
-      <div
-        onClick={setOpen}
-        className={`${open ? "" : "hidden"} h-screen w-screen backdrop-blur-sm`}
-      >
-        <div className="h-full w-full bg-secondary opacity-5"></div>
-      </div>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={setOpen}
+            className={`h-screen w-screen backdrop-blur-sm`}
+          >
+            <div className="h-full w-full bg-secondary opacity-5"></div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <motion.div
         animate={{ translateX: open ? "-100%" : "0%" }}
         transition={{ type: "tween" }}

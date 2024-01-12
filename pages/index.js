@@ -164,6 +164,7 @@ export default function Index() {
         darkMode={darkMode}
         setDarkMode={setDarkMode}
       />
+      {console.log(showCommandLine)}
       <main className="w-full max-w-screen-lg">
         <Home
           section={sections.home}

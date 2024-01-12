@@ -59,7 +59,7 @@
     --gradient-oceanic-three: rgba(194, 128, 255, 1);
   }
   h1 {
-    @apply text-6xl font-extrabold;
+    @apply text-5xl font-extrabold md:text-6xl;
   }
   h2 {
     @apply text-2xl font-bold;
